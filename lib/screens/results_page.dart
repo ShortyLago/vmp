@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:vmp/components/buttons.dart';
 import 'package:vmp/constants.dart';
 import 'package:vmp/questions/generator.dart';
 import 'package:vmp/questions/questions.dart';
+
+import 'home_page.dart';
 
 class ResultPage extends StatefulWidget {
   ResultPage({@required this.generator});
@@ -64,7 +67,12 @@ class _ResultPageState extends State<ResultPage> {
                 style: kOptionsTextButton,
               ),
               onPressed: () {
-                setState(() {});
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
               },
             ),
           ),
@@ -158,110 +166,28 @@ class _ResultPageState extends State<ResultPage> {
             ],
           ),
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.only(
-                  left: 15.0, top: 10.0, right: 15.0, bottom: 10.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: checkAnswer(0),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: FlatButton(
-                // textColor: Colors.black,
-                child: Text(
-                  generator.getQuestionOptions(0),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {},
-              ),
+            child: OptionButton(
+              colour: checkAnswer(0),
+              questionOptionText: generator.getQuestionOptions(0),
+              onPressed: () {},
             ),
           ),
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.only(
-                  left: 15.0, top: 10.0, right: 15.0, bottom: 10.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: checkAnswer(1),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: FlatButton(
-                // textColor: Colors.white,
-                child: Text(
-                  generator.getQuestionOptions(1),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {},
-              ),
+            child: OptionButton(
+              colour: checkAnswer(1),
+              questionOptionText: generator.getQuestionOptions(1),
+              onPressed: () {},
             ),
           ),
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.only(
-                  left: 15.0, top: 10.0, right: 15.0, bottom: 10.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: checkAnswer(2),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: FlatButton(
-                // textColor: Colors.white,
-                child: Text(
-                  generator.getQuestionOptions(2),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {
-                  // checkAnswer(2);
-                },
-              ),
+            child: OptionButton(
+              colour: checkAnswer(2),
+              questionOptionText: generator.getQuestionOptions(2),
+              onPressed: () {},
             ),
           ),
         ],
       ),
-      // floatingActionButton: Row(
-      //   mainAxisAlignment: MainAxisAlignment.end,
-      //   children: [
-      //     FloatingActionButton(
-      //       child: Icon(Icons.arrow_back),
-      //       onPressed: () {
-      //         setState(() {
-      //           generator.previousQuestion();
-      //         });
-      //       },
-      //       heroTag: null,
-      //     ),
-      //     SizedBox(
-      //       width: 300.0,
-      //     ),
-      //     FloatingActionButton(
-      //       child: Icon(Icons.arrow_forward),
-      //       onPressed: () {
-      //         setState(() {
-      //           generator.nextQuestion();
-      //         });
-      //       },
-      //       heroTag: null,
-      //     ),
-      //   ],
-      // ),
     );
   }
 }

@@ -2,57 +2,86 @@ import 'questions.dart';
 
 List<Question> questionsCevni = [
   Question(
-      '1. Juvenilná voda je: ',
-      '',
+      '1. Pojem „plavidlo“ znamená podľa CEVNI:',
+      '/',
       [
-        'a/ skondenzovaná para alebo dažďová voda ',
-        'b/ oligocénna voda ťažená z hĺbky 300m ',
-        'c/ voda z roztopených ľadovcov '
-      ],
-      0),
-  Question(
-      '2. Brakická voda je: ',
-      '',
-      [
-        'a/ morská - slaná voda ',
-        'b/ sladká (riečna voda) zmiešaná s morskou vodou v ústiach veľkých riek ',
-        'c/ riečna - sladká voda '
+        'A. vnútrozemské plavidlo okrem malých plavidiel a prievozných lodí',
+        'B. akúkoľvek loď vnútrozemskej plavby vrátane malých plavidiel, '
+            'prievozných lodi, plávajúcich strojov a taktiež námorných lodi',
+        'C. vnútrozemské a námorné lode okrem malých plavidiel a '
+            'plávajúcich strojov'
       ],
       1),
   Question(
-      '3. Morská voda má hmotnosť približne: ',
-      '',
+      '2. Pojem „plavidlo s vlastným pohonom“ znamená:',
+      '/',
       [
-        'a/ 1 liter = 1,00 kg ',
-        'b/ 1 liter = 2,00 kg ',
-        'c/ 1 liter = 1,16 kg '
+        'A. loď s vlastným strojným zariadením pre pohon pomocných zariadení – '
+            'bager, čerpacia stanica',
+        'B. akékoľvek plavidlo používajúce vlastný strojový pohon, okrem '
+            'plavidiel, ktorých strojový pohon sa používa len na prekonanie '
+            'malých vzdialenosti (v prístavoch alebo na polohách počas '
+            'vykládky alebo nakládky) alebo na zlepšenie ich manévrovateľnosti '
+            'pri vlečení alebo tlačení',
+        'C. plávajúce zariadenie'
+      ],
+      1),
+  Question(
+      '3. Pojem „plachetnica“ znamená:',
+      '/',
+      [
+        'A. plavidlo plávajúce pomocou plachiet, ktoré používa súčasne pomocný '
+            'stroj o max. výkone do 20 kW',
+        'B. plavidlo s vlastným strojným pohonom, ktorého hlavným pohonom je '
+            'spinaker',
+        'C. akékoľvek plavidlo plávajúce iba pomocou plachiet; plavidlo '
+            'plávajúce pomocou plachiet a zároveň používajúce svoj vlastný '
+            'strojový pohon sa považuje za plavidlo s vlastným pohonom',
       ],
       2),
   Question(
-      '4. Riečna - sladká voda má hmotnosť približne: ',
-      '',
+      '4. Pojem „malé plavidlo“ znamená podľa CEVNI:',
+      '/',
       [
-        'a/ 1 liter = 1,00 kg ',
-        'b/ 1 liter = 1,16 kg ',
-        'c/ 1 liter = 2,00 kg '
+        'A. akékoľvek plavidlo s dĺžkou trupu bez zarátania plutvy kormidla a '
+            'čelného nadstavca menšou ako 20 m s výnimkou plavidiel '
+            'postavených, vybavených alebo určených na tlačenie, vlečenie '
+            'alebo vedenie v bočne zviazanej zostave plavidiel, ktoré nie sú '
+            'malými plavidlami a tiež s výnimkou plavidiel, ktoré sú určene na '
+            'prepravu viac ako 12 cestujúcich, prievozných lodi, tlačných '
+            'člnov a plávajúcich strojov',
+        'B. plavidlo, ktorého dĺžka nepresahuje 24 m. Za malé sa nepovažuje '
+            'plavidlo, ktoré je určené alebo sa používa k vlečeniu, tlačeniu '
+            'alebo vedeniu bočnej zviazanej zostavy plavidiel, ktoré nie sú '
+            'malými plavidlami',
+        'C. akékoľvek športové plavidlo kratšie ako 20 m okrem prievoznej '
+            'lode, na ktorom je povolená preprava viac ako 12 cestujúcich',
       ],
       0),
   Question(
-      '5. Vnútorné moria sú: ',
-      '',
+      '5. Pojem „plávajúci stroj“ znamená podľa CEVNI:',
+      '/',
       [
-        'a/ slané jazerá do plochy 1000 m2 ',
-        'b/ moria zo slanou vodou celkom obkľúčené pevninami; s inými moriami sú spojené iba úžinami alebo umelými prieplavmi, alebo nie sú s nimi spojené vôbec ',
-        'c/ uzavreté vodné plochy (priehrady na riekach) '
+        'A. plavidlo vybavene mechanickým zariadením, ktoré sa používa na '
+            'prácu na vodnej ceste alebo v prístavoch (plávajúce bagre, '
+            'plávajúce dopravníky, plávajúce žeriavy a pod.)',
+        'B. plavidlo s vlastným pohonom, ktoré vykonáva prepravu cez vodnú '
+            'cestu',
+        'C. plávajúce zariadenie, ktoré je určené na opakované premiestňovanie '
+            'osôb a tovarov'
       ],
       1),
   Question(
-      '6. Svetové moria sú: ',
-      '',
+      '6. Pojem „plávajúce zariadenie“ znamená podľa CEVNI:',
+      '/',
       [
-        'a/ moria tvoriace prirodzené hranice medzi dvoma alebo viacerými štátmi ',
-        'b/ moria tvoriace prirodzené hranice medzi dvoma alebo viacerými svetadielmi ',
-        'c/ oceány a moria '
+        'A. zariadenie slúžiace na prepravu osôb alebo tovarov cez vodnú cestu',
+        'B. akýkoľvek plávajúci objekt, ktorý obvykle nie je určený na '
+            'opakovane premiestňovanie, napríklad plávajúce plavárne, doky, '
+            'pristávacie pontóny, hausbóty alebo plávajúce garáže pre člny a '
+            'podobne objekty',
+        'C. plavidlo vybavené strojným zariadením, na vykonávanie prác na '
+            'vodnej ceste'
       ],
       2),
   Question(

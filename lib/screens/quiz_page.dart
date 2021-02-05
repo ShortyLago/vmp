@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:vmp/components/buttons.dart';
 import 'package:vmp/constants.dart';
 import 'package:vmp/questions/generator.dart';
 import 'package:vmp/questions/questions.dart';
@@ -105,7 +106,7 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
           Expanded(
-            flex: 1,
+            flex: generator.getQuestionImage() == '' ? 0 : 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
@@ -118,54 +119,27 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(5.0),
-              child: FlatButton(
-                // textColor: Colors.black,
-                color: Color(0xFF0288D1),
-                child: Text(
-                  generator.getQuestionOptions(0),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {
-                  checkAnswer(0);
-                },
-              ),
+            child: OptionButton(
+              questionOptionText: generator.getQuestionOptions(0),
+              onPressed: () {
+                checkAnswer(0);
+              },
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(5.0),
-              child: FlatButton(
-                // textColor: Colors.white,
-                color: Color(0xFF0288D1),
-                child: Text(
-                  generator.getQuestionOptions(1),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {
-                  checkAnswer(1);
-                },
-              ),
+            child: OptionButton(
+              questionOptionText: generator.getQuestionOptions(1),
+              onPressed: () {
+                checkAnswer(1);
+              },
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(5.0),
-              child: FlatButton(
-                // textColor: Colors.white,
-                color: Color(0xFF0288D1),
-                child: Text(
-                  generator.getQuestionOptions(2),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {
-                  checkAnswer(2);
-                },
-              ),
+            child: OptionButton(
+              questionOptionText: generator.getQuestionOptions(2),
+              onPressed: () {
+                checkAnswer(2);
+              },
             ),
           ),
         ],

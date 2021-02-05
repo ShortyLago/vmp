@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-const kButtonColour = Colors.blue;
 const kBottomContainerHeight = 80.0;
+const kButtonColour = Colors.blue;
 const kDefaultColorButton = Colors.blueGrey;
 const kCorrectColorButton = Colors.green;
 const kWrongColorButton = Colors.red;

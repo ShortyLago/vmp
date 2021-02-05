@@ -39,3 +39,45 @@ class MainButton extends StatelessWidget {
     );
   }
 }
+
+class OptionButton extends StatefulWidget {
+  OptionButton(
+      {this.colour = kDefaultColorButton,
+      @required this.onPressed,
+      @required this.questionOptionText});
+
+  Color colour;
+  Function onPressed;
+  String questionOptionText;
+
+  @override
+  _OptionButtonState createState() => _OptionButtonState();
+}
+
+class _OptionButtonState extends State<OptionButton> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(5.0),
+      margin: EdgeInsets.only(left: 15.0, top: 10.0, right: 15.0, bottom: 10.0),
+      decoration: BoxDecoration(
+        shape: BoxShape.rectangle,
+        color: widget.colour,
+        border: Border.all(
+          color: Colors.black,
+          width: 2,
+        ),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: FlatButton(
+        // textColor: Colors.black,
+        child: Text(
+          widget.questionOptionText,
+          textAlign: TextAlign.center,
+          style: kOptionsTextButton,
+        ),
+        onPressed: widget.onPressed,
+      ),
+    );
+  }
+}

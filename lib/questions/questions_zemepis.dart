@@ -494,8 +494,7 @@ List<Question> questionsZemepis = [
       '61. Zemepisná dĺžka označuje: ',
       '',
       [
-        'a/ uhol medzi rovníkom a príslušnou polohou určitého bodu na severnej alebo južnej pologuli (0°- ',
-        '90°) ',
+        'a/ uhol medzi rovníkom a príslušnou polohou určitého bodu na severnej alebo južnej pologuli (0°- 90°) ',
         'b/ uhol medzi nultým (Greenwichským) poludníkom a určitým bodom na východnej alebo západnej pologuli ( 0° - 180° ) ',
         'c/ rovnobežku '
       ],
