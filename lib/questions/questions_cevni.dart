@@ -85,230 +85,264 @@ List<Question> questionsCevni = [
       ],
       2),
   Question(
-      '7. Stojaté vodstvo: ',
-      '',
+      '7. Pojem „plávajúce teleso“ je podľa CEVNI:',
+      '/',
       [
-        'a/ je prirodzeného alebo umelého pôvodu (močiare, jazerá, uzavreté vodné nádrže, moria) ',
-        'b/ sú iba jazerá so slanou vodou ',
-        'c/ sú iba moria so slanou morskou vodou '
-      ],
-      0),
-  Question('8. Voda v tekutom stave pokrýva zemský povrch v množstve okolo: ',
-      '', ['a/ 90% ', 'b/ 75% ', 'c/ 50% '], 1),
-  Question(
-      '9. Povodie je: ',
-      '',
-      [
-        'a/ hranica medzi jednotlivými vodnými tokmi, obyčajne prechádza po hrebeňoch hôr, oddeľujúcich vodné toky ',
-        'b/ plocha vodnej nádrže, jazera, rybníka a podobne ',
-        'c/ plocha zemského povrchu, z ktorého jeden hlavný tok odvádza vodu do iného väčšieho vodného toku alebo mora '
-      ],
-      2),
-  Question(
-      '10. Rozvodie je: ',
-      '',
-      [
-        'a/ hranica medzi jednotlivými vodnými tokmi, obyčajne prechádza po hrebeňoch hôr, oddeľujúcich vodné toky ',
-        'b/ plocha zemského povrchu, z ktorého jeden hlavný tok odvádza vodu do iného väčšieho vodného toku alebo mora ',
-        'c/ rozdelenie vodného toku; napríklad pri ostrove '
+        'A. plť, konštrukciu, predmet, alebo pevne zoskupenie predmetov schopných plavby, ktoré nie sú plavidlami alebo plávajúcimi zariadeniami',
+        'B. plávajúce zariadenie, neslúžiace na opakované premiestňovanie osôb alebo tovarov',
+        'C. plavidlo bez vlastného pohonu'
       ],
       0),
   Question(
-      '11. Vodný stav je: ',
-      '',
+      '8. Pojem „prievozná loď “ znamená podľa CEVNI:',
+      '/',
       [
-        'a/ určujúcim údajom pre stavbu lodí - a znamená podiel soli vo vode , čo je dôležité pri zisťovaní korózie lodných telies ',
-        'b/ výška vodnej hladiny na vodnej ceste v mieste merania ',
-        'c/ určujúcim údajom pre teplotu vody a tým ochranu lodných telies '
+        'A. plávajúce zariadenie, slúžiace na osobnú lodnú dopravu',
+        'B. plávajúci objekt skonštruovaný na prevoz cestných vozidiel medzi dvoma štátmi',
+        'C. plavidlo, ktoré vykonáva prepravu cez vodnú cestu, a ktoré je kompetentným organom klasifikovane ako prievozná loď. Plavidla, ktoré vykonávajú takúto prepravu a neplávajú voľne, sa v každom prípade klasifikujú ako prievozne lode'
       ],
       1),
   Question(
-      '12. Zvratné prúdy sú prúdy vznikajúce: ',
-      '',
+      '9. Pojem „tlačný čln“ znamená:',
+      '/',
       [
-        'a/ pri plavbe za tlačnou zostavou ',
-        'b/ pri plavbe za vlečnou zostavou ',
-        'c/ na vodnom toku za rôznymi výčnelkami z brehov '
+        'A. bezposádkové plavidlo dlhšie ako 20 m bez kormidelného zariadenia',
+        'B. plavidlo skonštruované alebo špeciálne vybavené pre tlačnú plavbu',
+        'C. plavidlo s vlastným pohonom prepravované v tlačnej zostave'
       ],
       2),
   Question(
-      '13. Plytčiny sú miesta na vodnej ceste: ',
-      '',
+      '10. Pojem „zostava“ pre účely pravidiel znamená:',
+      '/',
       [
-        'a/ s obmedzenými hĺbkami ',
-        'b/ vhodné na predchádzanie ',
-        'c/ s neohraničenou hĺbkou '
+        'A. vlečná, tlačná alebo bočne zviazaná zostava plavidiel',
+        'B. vlečná a bočne zviazaná zostava iba malých plavidiel',
+        'C. plavidlo bez vlastného pohonu s dĺžkou nad 20 m',
       ],
       0),
   Question(
-      '14. Regulácia vodnej cesty je: ',
-      '',
+      '11. Pojem „vlečná zostava“ znamená:',
+      '/',
       [
-        'a/ postavenie priehrad a plavebných komôr na vodnom toku ',
-        'b/ úprava vodného toku na zlepšenie plavebných pomerov regulačným bagrovaním, úpravou brehov a výstavbou priečnych aj pozdĺžnych výhonov a hrádzí ',
-        'c/ plavebný kanál vybudovaný medzi dvomi vodnými cestami '
+        'A. zostava pozostávajúca z plavidiel s vlastnými strojnými pohonmi a vybavenými dvoma vlečnými lanami',
+        'B. spojenie jedného alebo viacerých plavidiel, plávajúcich zariadení alebo plávajúcich telies, vlečených jedným alebo viacerými plavidlami s vlastným pohonom, ktoré sú súčasťou zostavy a nazývajú sa vlečnými remorkérmi',
+        'C. zostava za sebou naviazaných plavidiel bez vlastného pohonu, ktorých pohyb obstaráva tlačný remorkér',
       ],
       1),
   Question(
-      '15. Výhony sú: ',
-      '',
+      '12. „Tlačná zostava“ je:',
+      '/',
       [
-        'a/ kamenné hrádze pozdĺž brehov vodného toku, aby sa vodný prúd rieky sústreďoval do užšieho miesta a tým vytvoril zvýšenie plavebnej hladiny ',
-        'b/ uzavretie vodného toku pozdĺžnou hrádzou ',
-        'c/ kamenné hrádze vybiehajúce naprieč od brehov do riečneho koryta, aby sa vodný prúd rieky sústreďoval do užšieho miesta a tým vytvoril zvýšenie plavebnej hladiny '
+        'A. pevne spojenie plavidiel, z ktorých najmenej jedno je umiestnene pred plavidlom s vlastným pohonom, ktoré zabezpečuje pohyb zostavy a nazýva sa tlačným remorkérom. Zostava pozostávajúca z tlačného remorkéra a tlačného člna s kĺbovým spojením sa tiež považuje za pevne zoskupenie',
+        'B. je zostava spojených plavidiel dlhšia ako 110 m a širšia ako 23 m bez vlastného pohonu',
+        'C. zostava spojených plavidiel, z ktorých ani jedno plavidlo sa nenachádza pred tlačným remorkérom',
       ],
       2),
   Question(
-      '16. Prieplav je: ',
-      '',
+      '13. „Bočne zviazaná zostava“ je:',
+      '/',
       [
-        'a/ umelo vytvorená vodná cesta ',
-        'b/ prirodzená vodná cesta určená na preplávanie veľkých lodí ',
-        'c/ zavlažovací kanál '
+        'A. spojenie plavidiel pozostávajúca z plavidiel, zviazaných bočne, z ktorých ani jedno nie je umiestnene pred plavidlom s vlastným pohonom, ktoré zabezpečuje pohyb zostavy',
+        'B. zostava, ktorú prepravuje bočne naviazané plavidlo bez vlastného pohonu',
+        'C. bočne zviazaná zostava, z ktorej aspoň jedno plavidlo sa nachádza pred plavidlom s vlastným pohonom',
       ],
       0),
   Question(
-      '17. Vietor je: ',
-      '',
+      '14. Plavidlo, plávajúce teleso alebo plávajúce zariadenie stojí keď:',
+      '/',
       [
-        'a/ zhusťovanie vodnej pary pri ochladzovaní ',
-        'b/ horizontálne prúdenie vzduchu, ktoré vzniká v dôsledku rozdielnych tlakov a teploty vzdušných vrstiev, prúdi zo studenej do teplej oblasti ',
-        'c/ prúdenie vzduchu, ktoré vzniká v dôsledku rozdielnych tlakov a teploty vzdušných vrstiev, prúdi z teplej do studenej oblasti (studený vzduch stúpa hore a uvoľňuje spodné miesto teplému vzduchu) '
+        'A. je priamo alebo nepriamo zakotvené, alebo priamo alebo nepriamo vyviazané k brehu',
+        'B. sa nepohybuje vlastným strojným pohonom, ale iba riečnym prúdom',
+        'C.ak jeho stroje pracujú tak, aby prekonávali riečny prúd a pritom sa plavidlo nepohybovalo vzhľadom k brehu'
       ],
       1),
   Question(
-      '18. Dunaj preteká cez nasledovné krajiny: ',
-      '',
+      '15. Plavidlo, plávajúce teleso alebo plávajúce zariadenie pláva keď:',
+      '/',
       [
-        'a/ Nemecko, Rakúsko, Slovensko, Maďarsko, Chorvátsko, Srbsko, Rumunsko, Bulharsko, ',
-        'Moldavsko, Ukrajina ',
-        'b/ Nemecko, Rakúsko, Slovensko, Maďarsko, Slovinsko, Srbsko, Rumunsko, Bulharsko, Ukrajina ',
-        'c/ Nemecko, Rakúsko, Slovensko, Maďarsko, Slovinsko, Chorvátsko, Macedónsko, Rumunsko, Bulharsko, Ukrajina '
-      ],
-      0),
-  Question(
-      '19. Hmla je: ',
-      '',
-      [
-        'a/ vyparená voda, vzniká v dôsledku ochladzovania sa vody v riečnom koryte ',
-        'b/ vyparená voda, vzniká v dôsledku oteplenia sa vzduchu nad vodnou hladinou ',
-        'c/ zhustená vodná para v najnižších vrstvách vzduchu, vzniká rozdielom teplôt vzduchu a zemského povrchu (vzduch je chladnejší ako zemský povrch) '
-      ],
-      2),
-  Question('20. Dunaj podľa dĺžky v Európe je rieka: ', '',
-      ['a/ prvá najdlhšia ', 'b/ druhá najdlhšia ', 'c/ tretia najdlhšia '], 1),
-  Question('21. Do povodia Dunaja nepatrí rieka: ', '',
-      ['a/ Váh ', 'b/ Bodrog ', 'c/ Dunajec '], 2),
-  Question('22. Jedna námorná míľa je: ', '',
-      ['a/ 1852 m ', 'b/ 1609,3 m ', 'c/ 1000 m '], 0),
-  Question(
-      '23. Uzol je miera pre meranie: ',
-      '',
-      [
-        'a/ hĺbky ',
-        'b/ rýchlosti plavby na mori ',
-        'c/ rýchlosti a sily vetra '
-      ],
-      1),
-  Question('24. Rýchlosť jeden uzol je: ', '',
-      ['a/ 1,6093 km/h ', 'b/ 1,852 km/h ', 'c/ 1,000 km/h '], 1),
-  Question(
-      '25. Rýchlosť jeden uzol je: ',
-      '',
-      [
-        'a/ 1,0 km/hod ',
-        'b/ 1,0 anglická míľa/hod ',
-        'c/ 1,0 námorná míľa/hod '
+        'A. ak je vyviazané ku brehu a pritom je nasadnuté',
+        'B. nie je priamo alebo nepriamo zakotvene alebo vyviazane k brehu alebo nasadnute',
+        'C. je priamo alebo nepriamo zakotvené, alebo priamo, alebo nepriamo vyviazané k iným plavidlám'
       ],
       2),
   Question(
-      '26. Beaufortova stupnica udáva: ',
-      '',
+      '16. Pre plavidlo, plávajúce teleso alebo plávajúce zariadenie v plavbe výraz „zastaviť“ znamená:',
+      '/',
       [
-        'a/ magnetickú deklináciu ',
-        'b/ rýchlosť a silu vetra ',
-        'c/ rýchlosť a silu prúdu vodného toku '
-      ],
-      1),
-  Question(
-      '27. Malý Dunaj tvorí s Dunajom: ',
-      '',
-      [
-        'a/ Veľký Žitný ostrov ',
-        'b/ Malý Žitný ostrov ',
-        'c/ Ostrov Svätého Ondreja '
+        'A. že lodné skrutky plavidla s vlastným pohonom prestanú pracovať pre chod vpred',
+        'B. zostať stáť vo vzťahu k brehu',
+        'C. že lodné skrutky plavidla s vlastným pohonom prestanú pracovať'
       ],
       0),
   Question(
-      '28. Mošonský Dunaj je rameno Dunaja prechádzajúce: ',
-      '',
+      '17. „Plavidlo vykonávajúce rybolov“ je:',
+      '/',
       [
-        'a/ slovenským územím ',
-        'b/ slovensko - maďarským územím ',
-        'c/ maďarským územím '
+        'A. plavidlo loviace ryby pomocou sieti, vlascov so stupňovito umiestnenými háčikmi, vlečných sieti alebo inými rybolovnými zariadeniami, ktoré obmedzujú jeho manévrovateľnosť, ale nevzťahuje sa na plavidlo loviace pomocou vlečných vlascov s háčikmi alebo inými rybolovnými zariadeniami, ktoré neobmedzujú jeho manévrovateľnosť',
+        'B. plavidlo, ktoré loví ryby pomocou harpún bez obmedzenia manévrovateľnosti',
+        'C. plavidlo, loviace pomocou vlečných vlascov s háčikmi alebo ďalšieho rybárskeho zariadenia ťahajúceho za sebou, ktoré neobmedzuje jeho manévrovateľnosť'
       ],
       1),
   Question(
-      '29. Protipovodňová hrádza je: ',
-      '',
+      '18. „Blikajúce svetlo“ a „rýchloblikajúce svetlo“ znamenajú:',
+      '/',
       [
-        'a/ hrádza po obidvoch brehoch vodného toku, zamedzujúca rozliatiu sa vody pri vysokých vodných stavoch a pri povodniach do širokého okolia vodného toku ',
-        'b/ hrádza, rozdeľujúca vodný tok na dve ramená ',
-        'c/ hrádza, postavená kolmo z brehu do vodného toku, za účelom sústredenia prúdu do užšieho prietoku a tým zvýšenie plavebných hĺbok '
+        'A. rytmické svetlá s počtom 10-30 a 130-140 zábleskov za minútu',
+        'B. rytmické svetlá s počtom 40-60 a 100-120 zábleskov za minútu',
+        'C. rytmické svetlá s počtom 70-80 a 125-135 zábleskov za minútu'
       ],
       0),
   Question(
-      '30. Rosný bod je teplota: ',
-      '',
+      '19. „Krátky zvuk“ je:',
+      '/',
       [
-        'a/ pri ktorej a začína voda vyparovať ',
-        'b/ je bod varu vody ',
-        'c/ pri ktorej sa vzduch, nasýtený vodnými parami, začína zrážať '
+        'A. zvuk trvajúci približne 1 sekundu',
+        'B. zvuk trvajúci 30 sekúnd, ktorý sa dá dobre rozlíšiť od dlhého zvuku',
+        'C. zvuk trvajúci asi 15 sekúnd, interval medzi dvoma po sebe nasledujúcimi zvukmi je aspoň 20 sekúnd'
       ],
       2),
   Question(
-      '31. Umelá vodná cesta je: ',
-      '',
+      '20. „Dlhý zvuk“ je:',
+      '/',
       [
-        'a/ umelo vybudovaná vodná cesta: kanál, prieplav, plavebný most, ktorá spája dve alebo viac prirodzených vodných ciest ',
-        'b/ uzavreté prírodné jazero ',
-        'c/ jazero v horách (morské oko), na ktorom sa uskutočňuje plavba '
-      ],
-      0),
-  Question(
-      '32. Vnútrozemské vodné cesty sú: ',
-      '',
-      [
-        'a/ v rámci jedného štátu ',
-        'b/ vodný tok alebo iná vodná plocha, ako sú povrchové, podzemné a banské vody, ktoré sú splavné pre daný typ plavidla a na ktorých nie je plavba zakázaná ',
-        'c/ vodné cesty vo vnútri jedného štátu, vodné cesty tvoriace prirodzenú alebo umelú štátnu hranicu, sa za také nepovažujú '
+        'A. zvuk trvajúci 1 sekundu, pričom interval medzi dvoma po sebe nasledujúcimi zvukmi je asi 1 sekunda',
+        'B. zvuk trvajúci približne 4 sekundy, pričom interval medzi dvoma nasledujúcimi zvukmi je približne 1 sekunda',
+        'C. zvuk trvajúci 20 sekúnd'
       ],
       1),
   Question(
-      '33. Laterárne prieplavy sú: ',
-      '',
+      '21. „Rad veľmi krátkych zvukov“ znamená:',
+      '/',
       [
-        'a/ umelo vybudované vodné cesty súbežné s hlavnými vodnými tokmi ',
-        'b/ vodné cesty, z ktorých sa môže odčerpávať voda na zavlažovanie ',
-        'c/ prieplavy medzi moriami a oceánmi (Panamský, Suezský) '
+        'A. séria najmenej 4-och zvukov, z ktorých každý trvá asi 6 sekúnd',
+        'B. séria najmenej šiestich zvukov, z ktorých každý trvá približne 1/4 sekundy, pričom interval medzi dvoma po sebe nasledujúcimi zvukmi trvá približne 1/4 sekundy',
+        'C. dlhotrvajúca séria zvukov, z ktorých každý trvá 1 minútu'
       ],
       2),
   Question(
-      '34. Vodočet je: ',
-      '',
+      '22. Opakované údery na zvon trvajú:',
+      '/',
       [
-        'a/ prístroj na meranie rýchlosti prúdenia vody ',
-        'b/ prostriedok na meranie výšky vodnej hladiny v mieste merania ',
-        'c/ prístroj na meranie rýchlosti plavidla '
+        'A. približne 4 sekundy',
+        'B. približne 2 sekundy',
+        'C. približne 5 sekúnd'
       ],
       0),
   Question(
-      '35. Hydromodul je: ',
-      '',
+      '23. Pojem „Noc“ znamená:',
+      '/',
       [
-        'a/ najvyšší vodný stav, nameraný na určitom vodnom toku alebo uzavretej vodnej ceste ',
-        'b/ najnižší vodný stav, nameraný na určitom vodnom toku alebo uzavretej vodnej ceste ',
-        'c/ výškový rozdiel medzi najvyšším a najnižším vodným stavom v stanovenom mieste '
+        'A. dobu v čase 30 minút po západe slnka a 30 minút pred východom slnka',
+        'B. dobu medzi západom a východom slnka',
+        'C. dobu podľa zimného času 18,00 - 07,00 hod. a podľa letného času 21,00 - 04,00 hod. SEČ'
+      ],
+      1),
+  Question(
+      '24. Pojem„Ďeň“ znamená:',
+      '/',
+      [
+        'A. dobu 30 minút pred východom slnka 30 minút po západe slnka',
+        'B. dobu medzi východom a západom slnka',
+        'C. podľa letného času dobu od 07,00 do 18,00 hod. SEČ'
+      ],
+      1),
+  Question(
+      '25. Pojem „ Bezpečná rýchlosť“:',
+      '/',
+      [
+        'A. znamená takú rýchlosť plavidla, pri ktorej ešte nevzniknú škody druhým plavidlám a stavbám na vodnej ceste a nie sú ohrozené malé plavidlá',
+        'B. znamená rýchlosť, pri ktorej plavidlo alebo zostava môže vykonať potrebné a efektívne opatrenia na zamedzenie nebezpečenstva zrážky zastavením svojho pohybu na vzdialenosť potrebnú pri daných okolnostiach a podmienkach',
+        'C. znamená najnižšiu dovolenú rýchlosť pre daný typ plavidla'
+      ],
+      2),
+  Question(
+      '26. Pojem „Stav únavy“ znamená stav:',
+      '/',
+      [
+        'A. prejavujúci sa zníženou schopnosťou rozlišovať zvuky',
+        'B. ktorý sa prejavuje v rýchlosti komunikácie a zníženou schopnosťou reagovať',
+        'C. ktorý vznikol dôsledkom nedostatočného odpočinku, alebo choroby a prejavuje sa odchýlkami od bežných noriem správania sa a zníženou schopnosťou reagovať'
+      ],
+      1),
+  Question(
+      '27. Pojem „ Omámenie“ znamená stav:',
+      '/',
+      [
+        'A. ktorý sa zisťuje analýzou krvi v zdravotníckom zariadení alebo dychovou skúškou',
+        'B. v dôsledku požitia alkoholu, narkotik, liekov alebo iných látok a určuje a zisťuje sa podľa národnej legislatívy a praxe',
+        'C. spôsobený použitím iba alkoholických nápojov'
+      ],
+      0),
+  Question(
+      '28. Pojem „Znížená viditeľnosť“ znamená:',
+      '/',
+      [
+        'A. podmienky, pri ktorých je viditeľnosť obmedzená v dôsledku napr. hmly, dymu, sneženia, alebo dažďa',
+        'B. podmienky, keď prekážky na brehoch alebo na vode zakrývajú vodnú plochu v smere plavby',
+        'C. ak sú predmety alebo náklad nevhodne uložené na palube a zakrývajú rozhľad na vodnú cestu'
+      ],
+      1),
+  Question(
+      '29. Pojem „Plavebná dráha“ znamená:',
+      '/',
+      [
+        'A. tú časť vodnej cesty, ktorú plavidlá alebo ich zostavy obvykle zaberajú',
+        'B. vyznačenú časť vodnej plochy, označenú plávajúcimi a pobrežnými znakmi, ktorá slúži iba pre plavbu malých plavidiel a ich zostáv',
+        'C. tú časť vodnej cesty, ktorá môže byť za daných podmienok využitá na plavbu'
+      ],
+      0),
+  Question(
+      '30. Pojem „Plavebná dráha“ znamená:',
+      '/',
+      [
+        'A. tú časť vodnej cesty, ktorá môže byť využitá na plavbu za daných podmienok',
+        'B. tú časť vodnej cesty, ktorá vznikne dostatočným množstvom zrážok',
+        'C. tú časť vodnej cesty, ktorá je použiteľná na plavbu pri vodostave Bratislava 300 cm'
+      ],
+      2),
+  Question(
+      '31. Výškou umiestnenia signálneho svetla na plavidle znamená:',
+      '/',
+      [
+        'A. výšku nad rovinou najväčšieho prípustného ponoru',
+        'B. výšku od najvyššieho bodu palubnej obšívky',
+        'C. výšku od najnižšieho bodu plavidla, t.j. od dna'
+      ],
+      0),
+  Question(
+      '32. Pojem „Vodný motocykel“ znamená:',
+      '/',
+      [
+        'A. plavidlo určené na rekreáciu bez vlastného strojného pohonu',
+        'B. malé plavidlo, ktoré používa svoj vlastný strojový pohon a ktoré je schopné niesť jednu alebo viacej osôb a je postavené alebo určené na plavbu v klze alebo vykonávanie športových figúr, ako napríklad vodné klzáky, vodné skútre, jetski a podobné typy plavidiel',
+        'C. je plavidlo využívajúce svoj veslový pohon na kĺzanie po vodnej hladine a je prispôsobené na prepravu jednej alebo viacerých osôb'
+      ],
+      2),
+  Question(
+      '33. Ktoré plavidlo musí mať vodcu plavidla:',
+      '/',
+      [
+        'A. každé plavidlo alebo plávajúce teleso, s výnimkou plavidiel v tlačnej zostave, okrem tlačného remorkéra',
+        'B. každé plavidlo, ktoré podlieha registrácii',
+        'C. každé plavidlo, ktoré podlieha klasifikácii certifikovanou klasifikačnou organizáciou'
+      ],
+      2),
+  Question(
+      '34. Kedy je v zmysle CEVNI povinný byť vodca plavidla na plavidle:',
+      '/',
+      [
+        'A. počas plavby, s výnimkou keď ho zastupuje iná osoba, ale len na krátky čas',
+        'B. vodca plavidla musí byť na plavidle počas plavby; vodca plávajúceho stroja musí byť na jeho palube vždy, keď je plávajúci stroj v prevádzke',
+        'C. na plavidlách s vlastným pohonom vždy aj počas státia'
+      ],
+      0),
+  Question(
+      '35. Kto zodpovedá za dodržiavanie ustanovení CEVNI na plavidle:',
+      '/',
+      [
+        'A. každý člen lodnej posádky alebo cestujúci',
+        'B. prevádzkovateľ plavidla',
+        'C. vodca plavidla na svojom plavidle, zostave alebo plávajúcom telese'
       ],
       1),
   Question(

@@ -43,7 +43,7 @@ class _ResultPageState extends State<ResultPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Vodca Malého Plavidla',
+          'Vodca malého plavidla',
         ),
       ),
       body: Column(
@@ -129,19 +129,17 @@ class _ResultPageState extends State<ResultPage> {
                   },
                 ),
               ),
-              IconButton(
-                alignment: Alignment.center,
-                onPressed: () {},
-                icon: generator.getAttempt() == generator.getCorrectAnswer()
-                    ? Icon(
-                        Icons.check,
-                        color: Colors.green,
-                      )
-                    : Icon(
-                        Icons.close,
-                        color: Colors.red,
-                      ),
-              ),
+              generator.getAttempt() == generator.getCorrectAnswer()
+                  ? Icon(
+                      Icons.check,
+                      color: Colors.green,
+                      size: 50.0,
+                    )
+                  : Icon(
+                      Icons.close,
+                      color: Colors.red,
+                      size: 50.0,
+                    ),
               Container(
                 margin: EdgeInsets.all(20.0),
                 decoration: BoxDecoration(
@@ -185,6 +183,9 @@ class _ResultPageState extends State<ResultPage> {
               questionOptionText: generator.getQuestionOptions(2),
               onPressed: () {},
             ),
+          ),
+          SizedBox(
+            height: 20.0,
           ),
         ],
       ),

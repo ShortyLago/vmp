@@ -34,8 +34,11 @@ class _QuizPageState extends State<QuizPage> {
         Alert(
           context: context,
           type: generator.getVerdict() ? AlertType.success : AlertType.error,
-          title: 'Hotovo!',
-          desc: 'Zodpovedali ste na všetky otázky.',
+          title: generator.getVerdict() ? 'Gratulujem!' : 'Ľutujem',
+          desc: 'Počet správne zodpovedaných otázok: ' +
+              generator.getResult().toString() +
+              '\nMinimálny počet: ' +
+              generator.getMinimum(),
           buttons: [
             DialogButton(
               child: Text(
@@ -106,15 +109,21 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
           Expanded(
-            flex: generator.getQuestionImage() == '' ? 0 : 1,
+            flex: generator.getQuestionImage() == '' ||
+                    generator.getQuestionImage() == '/'
+                ? 0
+                : 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: Image(
-                  image: AssetImage(
-                    generator.getQuestionImage(),
-                  ),
-                ),
+                child: generator.getQuestionImage() == '' ||
+                        generator.getQuestionImage() == '/'
+                    ? Text('')
+                    : Image(
+                        image: AssetImage(
+                          generator.getQuestionImage(),
+                        ),
+                      ),
               ),
             ),
           ),
@@ -141,6 +150,9 @@ class _QuizPageState extends State<QuizPage> {
                 checkAnswer(2);
               },
             ),
+          ),
+          SizedBox(
+            height: 20.0,
           ),
         ],
       ),

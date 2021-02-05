@@ -15,6 +15,7 @@ class Generator {
   var rng = new Random();
   int _questionNumber = 0;
   int _resultsCount = 0;
+  List<int> _minResults = [24, 6, 6, 23];
 
   List<Question> _questionBank = [];
   List<int> _answers = [];
@@ -147,23 +148,28 @@ class Generator {
 
   bool getVerdict() {
     // A
-    if (quizType == 0 && getResult() >= 24) {
+    if (quizType == 0 && getResult() >= _minResults[0]) {
       return true;
       // B
-    } else if (quizType == 1 && getResult() >= 6) {
+    } else if (quizType == 1 && getResult() >= _minResults[1]) {
       return true;
       // C
-    } else if (quizType == 2 && getResult() >= 6) {
+    } else if (quizType == 2 && getResult() >= _minResults[2]) {
       return true;
       // D
-    } else if (quizType == 3 && getResult() >= 23) {
+    } else if (quizType == 3 && getResult() >= _minResults[3]) {
       return true;
     } else {
       return false;
     }
   }
 
+  String getMinimum() {
+    return _minResults[quizType].toString();
+  }
+
   int getResult() {
+    _resultsCount = 0;
     for (var i = 0; i <= _answers.length - 1; i++) {
       if (_answers[i] == _questionBank[i].correctOption) {
         _resultsCount++;
