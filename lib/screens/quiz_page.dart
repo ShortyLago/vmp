@@ -85,7 +85,7 @@ class _QuizPageState extends State<QuizPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Vodca Malého Plavidla',
+          'Vodca malého plavidla',
         ),
       ),
       body: Column(
@@ -93,7 +93,7 @@ class _QuizPageState extends State<QuizPage> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
-            flex: 2,
+            // flex: 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
@@ -113,18 +113,15 @@ class _QuizPageState extends State<QuizPage> {
                     generator.getQuestionImage() == '/'
                 ? 0
                 : 1,
-            child: Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Center(
-                child: generator.getQuestionImage() == '' ||
-                        generator.getQuestionImage() == '/'
-                    ? Text('')
-                    : Image(
-                        image: AssetImage(
-                          generator.getQuestionImage(),
-                        ),
+            child: Center(
+              child: generator.getQuestionImage() == '' ||
+                      generator.getQuestionImage() == '/'
+                  ? Text('')
+                  : Image(
+                      image: AssetImage(
+                        generator.getQuestionImage(),
                       ),
-              ),
+                    ),
             ),
           ),
           Expanded(

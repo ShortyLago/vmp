@@ -20,6 +20,6 @@ const kAlertTextButton = TextStyle(
 
 const kOptionsTextButton = TextStyle(
   color: Colors.black,
-  fontSize: 18.0,
+  fontSize: 16.0,
   fontWeight: FontWeight.w600,
 );

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:vmp/screens/home_page.dart';
 
 void main() => runApp(VMP());
@@ -7,6 +8,10 @@ void main() => runApp(VMP());
 class VMP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     return MaterialApp(
       theme: ThemeData.light().copyWith(
         primaryColor: Color(0xFF0288D1),

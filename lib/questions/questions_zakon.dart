@@ -2,823 +2,372 @@ import 'questions.dart';
 
 List<Question> questionsZakon = [
   Question(
-      '1. Juvenilná voda je: ',
-      '',
+      '1./ Za čo zodpovedá správca vodného toku?',
+      '/',
       [
-        'a/ skondenzovaná para alebo dažďová voda ',
-        'b/ oligocénna voda ťažená z hĺbky 300m ',
-        'c/ voda z roztopených ľadovcov '
+        'a) správca vodného toku , ktorý plní úlohy prevádzkovateľa vodnej cesty , je zodpovedný za udržiavanie a zlepšovanie podmienok na prevádzku plavidiel na nesledovaných vodných cestách',
+        'b) Správca vodného toku, ktorý plní úlohy prevádzkovateľa vodnej cesty, je zodpovedný za udržiavanie a zlepšovanie podmienok na prevádzku plavidiel na sledovaných vodných cestách. Správca vodného toku zodpovedá za vytýčenie plavebnej dráhy, za vyznačenie plavebných prekážok na vodných cestách a ich odstraňovanie na základe pokynov Dopravného úradu',
+        'c) správca vodného toku zodpovedá iba za riadne vytýčenie plavebnej dráhy, ktoré vykonáva na základe pokynov Dopravného úradu, nezodpovedá za udržiavanie a zlepšovanie podmienok na prevádzku plavidiel na sledovaných vodných cestách',
+      ],
+      1),
+  Question(
+      '2./ Vodnou dopravou sa podľa zákona 338/2000 Z.z. v znení neskorších predpisov rozumie:',
+      '/',
+      [
+        'a) preprava tovaru a osôb plavidlami na vodných cestách na účely podnikania aj vtedy, ak toto podnikanie nie je vykonávané pravidelne',
+        'b) preprava tovaru a osôb plavidlami na vodných cestách na účely podnikania iba vtedy, ak toto podnikanie je vykonávané pravidelne',
+        'c) iba preprava tovaru na vodných cestách na účely podnikania',
       ],
       0),
   Question(
-      '2. Brakická voda je: ',
-      '',
+      '3./ Vnútrozemskou vodnou cestou sa podľa zákona 338/2000 Z.z. v znení neskorších predpisov rozumie:',
+      '/',
       [
-        'a/ morská - slaná voda ',
-        'b/ sladká (riečna voda) zmiešaná s morskou vodou v ústiach veľkých riek ',
-        'c/ riečna - sladká voda '
-      ],
-      1),
-  Question(
-      '3. Morská voda má hmotnosť približne: ',
-      '',
-      [
-        'a/ 1 liter = 1,00 kg ',
-        'b/ 1 liter = 2,00 kg ',
-        'c/ 1 liter = 1,16 kg '
+        'a) vodný tok, iná vodná plocha, odkryté podzemné vody, povrchové, podzemné a banské vody',
+        'b) vodný tok, alebo iná vodná plocha, ako sú povrchové, podzemné a banské vody, ktoré sú splavné pre daný typ plavidla a aj tie na ktorých je plavba zakázaná',
+        'c) vodný tok, alebo iná vodná plocha , ako sú povrchové, podzemné a banské vody, ktoré sú splavné pre daný typ plavidla a na ktorých nie je plavba zakázaná',
       ],
       2),
   Question(
-      '4. Riečna - sladká voda má hmotnosť približne: ',
-      '',
+      '4./ Ktoré plavidlá sa zapisujú do registra plavidiel?',
+      '/',
       [
-        'a/ 1 liter = 1,00 kg ',
-        'b/ 1 liter = 1,16 kg ',
-        'c/ 1 liter = 2,00 kg '
+        'a) plavidlá, ktorých celková hmotnosť bez povolenej užitočnej hmotnosti nepresahuje 1000 kg alebo výkon pohonného zariadenia je menší ako 2 kW',
+        'b) plavidlá, ktorých celková hmotnosť vrátane povolenej užitočnej hmotnosti presahuje 1000 kg alebo výkon pohonného strojového zariadenia je väčší ako 4 kW alebo plocha plachiet je väčšia ako 12 m2 a nie sú registrované mimo územia Slovenskej republiky, okrem plavidiel určených výlučne na športovú činnosť vykonávanú na vodných plochách vymedzených plavebným opatrením.',
+        'c) plavidlá, ktorých dĺžka presahuje 4 m',
+      ],
+      1),
+  Question(
+      '5./ Na malom plavidle musia byť počas prevádzky:',
+      '/',
+      [
+        'a) lodný denník, zoznam posádky plavidla, doklad o poistení zodpovednosti za škodu spôsobenú prevádzkou plavidla',
+        'b) zoznam posádky, lodné osvedčenie alebo osobitné povolenie na prevádzku plavidla',
+        'c) originál lodného osvedčenia alebo osobitného povolenia na prevádzku plavidla a doklad o poistení zodpovednosti za škodu spôsobenú prevádzkou plavidla, povolenie na státie plávajúceho zariadenia na vodnej ceste alebo v prístave ak je plávajúcim zariadením, povolenie na zriadenie a prevádzkovanie rádiovej stanice, ak má plavidlo takúto stanicu, správa o revízii vyhradeného technického zariadenia podľa druhu vyhradeného technického zariadenia.',
+      ],
+      2),
+  Question(
+      '6./ Pod pojmom vnútrozemská plavba sa rozumie?',
+      '/',
+      [
+        'a) prevádzka plavidiel na vnútrozemských vodných cestách a v prístavoch vrátane činností súvisiacich s touto prevádzkou',
+        'b) preprava tovaru a osôb plavidlami na vodných cestách na účely podnikania iba vtedy, ak toto podnikanie je vykonávané pravidelne',
+        'c) iba preprava tovaru na vodných cestách na účely podnikania',
       ],
       0),
   Question(
-      '5. Vnútorné moria sú: ',
-      '',
+      '7./ Orgánmi štátnej správy pre vnútrozemskú plavbu a prístavy sú:',
+      '/',
       [
-        'a/ slané jazerá do plochy 1000 m2 ',
-        'b/ moria zo slanou vodou celkom obkľúčené pevninami; s inými moriami sú spojené iba úžinami alebo umelými prieplavmi, alebo nie sú s nimi spojené vôbec ',
-        'c/ uzavreté vodné plochy (priehrady na riekach) '
+        'a) Dopravný úrad a Ministerstvo hospodárstva Slovenskej republiky',
+        'b) Ministerstvo dopravy a výstavby SR a Dopravný úrad',
+        'c) Ministerstvo vnútra a Polícia Slovenskej republiky',
       ],
       1),
   Question(
-      '6. Svetové moria sú: ',
-      '',
+      '8./ Činnosť na vodnej ceste alebo v jej ochrannom pásme, ktorá by mohla ovplyvniť plavbu možno vykonávať len po predchádzajúcom súhlase:',
+      '/',
       [
-        'a/ moria tvoriace prirodzené hranice medzi dvoma alebo viacerými štátmi ',
-        'b/ moria tvoriace prirodzené hranice medzi dvoma alebo viacerými svetadielmi ',
-        'c/ oceány a moria '
-      ],
-      2),
-  Question(
-      '7. Stojaté vodstvo: ',
-      '',
-      [
-        'a/ je prirodzeného alebo umelého pôvodu (močiare, jazerá, uzavreté vodné nádrže, moria) ',
-        'b/ sú iba jazerá so slanou vodou ',
-        'c/ sú iba moria so slanou morskou vodou '
-      ],
-      0),
-  Question('8. Voda v tekutom stave pokrýva zemský povrch v množstve okolo: ',
-      '', ['a/ 90% ', 'b/ 75% ', 'c/ 50% '], 1),
-  Question(
-      '9. Povodie je: ',
-      '',
-      [
-        'a/ hranica medzi jednotlivými vodnými tokmi, obyčajne prechádza po hrebeňoch hôr, oddeľujúcich vodné toky ',
-        'b/ plocha vodnej nádrže, jazera, rybníka a podobne ',
-        'c/ plocha zemského povrchu, z ktorého jeden hlavný tok odvádza vodu do iného väčšieho vodného toku alebo mora '
-      ],
-      2),
-  Question(
-      '10. Rozvodie je: ',
-      '',
-      [
-        'a/ hranica medzi jednotlivými vodnými tokmi, obyčajne prechádza po hrebeňoch hôr, oddeľujúcich vodné toky ',
-        'b/ plocha zemského povrchu, z ktorého jeden hlavný tok odvádza vodu do iného väčšieho vodného toku alebo mora ',
-        'c/ rozdelenie vodného toku; napríklad pri ostrove '
-      ],
-      0),
-  Question(
-      '11. Vodný stav je: ',
-      '',
-      [
-        'a/ určujúcim údajom pre stavbu lodí - a znamená podiel soli vo vode , čo je dôležité pri zisťovaní korózie lodných telies ',
-        'b/ výška vodnej hladiny na vodnej ceste v mieste merania ',
-        'c/ určujúcim údajom pre teplotu vody a tým ochranu lodných telies '
+        'a) Ministerstva dopravy a výstavby SR',
+        'b) Dopravného úradu',
+        'c) správcu vodného toku',
       ],
       1),
   Question(
-      '12. Zvratné prúdy sú prúdy vznikajúce: ',
-      '',
+      '9./ Môže viesť malé plavidlo podliehajúce registrácii osoba, ktorá nemá odbornú spôsobilosť „Vodca malého plavidla“?',
+      '/',
       [
-        'a/ pri plavbe za tlačnou zostavou ',
-        'b/ pri plavbe za vlečnou zostavou ',
-        'c/ na vodnom toku za rôznymi výčnelkami z brehov '
+        'a) môže, ale iba na stojatých vodách',
+        'b) môže, ak je na palube osoba staršia ako 18 rokov',
+        'c) nemôže',
       ],
       2),
   Question(
-      '13. Plytčiny sú miesta na vodnej ceste: ',
-      '',
+      '10./ Štátny odborný dozor nad prevádzkou plavidiel vykonáva:',
+      '/',
       [
-        'a/ s obmedzenými hĺbkami ',
-        'b/ vhodné na predchádzanie ',
-        'c/ s neohraničenou hĺbkou '
+        'a) Policajný zbor Slovenskej republiky',
+        'b) Dopravný úrad',
+        'c) odbor dopravy na ministerstve vnútra',
+      ],
+      1),
+  Question(
+      '11./ Lodné osvedčenie alebo osobitné povolenie na prevádzku plavidla je:',
+      '/',
+      [
+        'a) súkromná listina vlastníka plavidla',
+        'b) verejná listina',
+        'c) je verejná listina len u plavidiel s výtlakom väčším ako 100 m3',
+      ],
+      1),
+  Question(
+      '12./ Lodné osvedčenie je:',
+      '/',
+      [
+        'a) lodná listina, ktorou sa preukazuje technická spôsobilosť plavidla na plavbu, vydáva ho Dopravný úrad',
+        'b) lodná listina, ktorou sa preukazuje spôsobilosť plavidla na plavbu, vydáva ho Ministerstvo dopravy a výstavby SR',
+        'c) lodná listina určujúca rozmery plavidla, vydáva ho výrobca plavidla',
       ],
       0),
   Question(
-      '14. Regulácia vodnej cesty je: ',
-      '',
+      '13./ Vo verejných prístavoch prístavné poplatky vyberá:',
+      '/',
       [
-        'a/ postavenie priehrad a plavebných komôr na vodnom toku ',
-        'b/ úprava vodného toku na zlepšenie plavebných pomerov regulačným bagrovaním, úpravou brehov a výstavbou priečnych aj pozdĺžnych výhonov a hrádzí ',
-        'c/ plavebný kanál vybudovaný medzi dvomi vodnými cestami '
-      ],
-      1),
-  Question(
-      '15. Výhony sú: ',
-      '',
-      [
-        'a/ kamenné hrádze pozdĺž brehov vodného toku, aby sa vodný prúd rieky sústreďoval do užšieho miesta a tým vytvoril zvýšenie plavebnej hladiny ',
-        'b/ uzavretie vodného toku pozdĺžnou hrádzou ',
-        'c/ kamenné hrádze vybiehajúce naprieč od brehov do riečneho koryta, aby sa vodný prúd rieky sústreďoval do užšieho miesta a tým vytvoril zvýšenie plavebnej hladiny '
+        'a) Dopravný úrad',
+        'b) Ministerstvo dopravy a výstavby SR',
+        'c) Verejné prístavy, a.s.',
       ],
       2),
   Question(
-      '16. Prieplav je: ',
-      '',
+      '14./ Výnimku z platenia prístavných poplatkov za užívanie verejného prístavu:',
+      '/',
       [
-        'a/ umelo vytvorená vodná cesta ',
-        'b/ prirodzená vodná cesta určená na preplávanie veľkých lodí ',
-        'c/ zavlažovací kanál '
+        'a) nemožno udeliť',
+        'b) udeľuje Dopravný úrad',
+        'c) udeľuje správca verejného prístavu',
       ],
       0),
   Question(
-      '17. Vietor je: ',
-      '',
+      '15./ Plavebný inšpektor sa pri výkone štátneho odborného dozoru preukazuje:',
+      '/',
       [
-        'a/ zhusťovanie vodnej pary pri ochladzovaní ',
-        'b/ horizontálne prúdenie vzduchu, ktoré vzniká v dôsledku rozdielnych tlakov a teploty vzdušných vrstiev, prúdi zo studenej do teplej oblasti ',
-        'c/ prúdenie vzduchu, ktoré vzniká v dôsledku rozdielnych tlakov a teploty vzdušných vrstiev, prúdi z teplej do studenej oblasti (studený vzduch stúpa hore a uvoľňuje spodné miesto teplému vzduchu) '
+        'a) preukazom odbornej spôsobilosti vodcu malého plavidla',
+        'b) preukazom plavebného inšpektora',
+        'c) klasifikačným preukazom',
       ],
       1),
   Question(
-      '18. Dunaj preteká cez nasledovné krajiny: ',
-      '',
+      '16./ Je povinný vodca plavidla nahlásiť Dopravnému úradu každú plavebnú nehodu?',
+      '/',
       [
-        'a/ Nemecko, Rakúsko, Slovensko, Maďarsko, Chorvátsko, Srbsko, Rumunsko, Bulharsko, ',
-        'Moldavsko, Ukrajina ',
-        'b/ Nemecko, Rakúsko, Slovensko, Maďarsko, Slovinsko, Srbsko, Rumunsko, Bulharsko, Ukrajina ',
-        'c/ Nemecko, Rakúsko, Slovensko, Maďarsko, Slovinsko, Chorvátsko, Macedónsko, Rumunsko, Bulharsko, Ukrajina '
+        'a) áno',
+        'b) nie, ak škoda vznikla len na vodnej ceste',
+        'c) nie, ak škoda vznikla len na plavidle a zrejme nepresahuje hodnotu 10 000 €',
+      ],
+      2),
+  Question(
+      '17./ Čo sa rozumie pod pojmom malé plavidlo v zmysle zákona 338/2000 Z.z.?',
+      '/',
+      [
+        'a) plavidlo s dĺžkou trupu do 20 m, ktoré je určené na prepravu najviac 12 cestujúcich a plavidlo, ktoré je určené len na športové a oddychové účely bez ohľadu na spôsob jeho pohonu s dĺžkou trupu od 2,5 m do 24 m s výnimkou plavidiel postavených alebo určených na tlačenie alebo vlečenie alebo vedenie v bočne zviazanej zostave plavidiel, ktoré nie sú malými plavidlami, prievozných lodí a plávajúcich strojov,',
+        'b) plavidlo s dĺžkou trupu do 25 m, určené na prepravu najviac 20 cestujúcich a plavidlo,ktoré je určené len športové a rekreačné účely bez ohľadu na spôsob jeho pohonu s dĺžkou trupu od 2,5 m do 24 m s výnimkou plavidiel postavených alebo určených na tlačenie alebo vlečenie alebo vedenie v bočne zviazanej zostave plavidiel, ktoré nie sú malými plavidlami, prievozných lodí a plávajúcich strojov',
+        'c) plavidlo s dĺžkou trupu do 20 m, určené na prepravu najviac 18 cestujúcich a plavidlo, ktoré je určené len športové a rekreačné účely bez ohľadu na spôsob jeho pohonu s dĺžkou trupu od 2,5 m do 24 m s výnimkou plavidiel postavených alebo určených na tlačenie alebo vlečenie alebo vedenie v bočne zviazanej zostave plavidiel, ktoré nie sú malými plavidlami, prievozných lodí a plávajúcich strojov',
       ],
       0),
   Question(
-      '19. Hmla je: ',
-      '',
+      '18./ Na zaistenie bezpečnosti a plynulosti plavebnej prevádzky Dopravný úrad vydáva:',
+      '/',
       [
-        'a/ vyparená voda, vzniká v dôsledku ochladzovania sa vody v riečnom koryte ',
-        'b/ vyparená voda, vzniká v dôsledku oteplenia sa vzduchu nad vodnou hladinou ',
-        'c/ zhustená vodná para v najnižších vrstvách vzduchu, vzniká rozdielom teplôt vzduchu a zemského povrchu (vzduch je chladnejší ako zemský povrch) '
-      ],
-      2),
-  Question('20. Dunaj podľa dĺžky v Európe je rieka: ', '',
-      ['a/ prvá najdlhšia ', 'b/ druhá najdlhšia ', 'c/ tretia najdlhšia '], 1),
-  Question('21. Do povodia Dunaja nepatrí rieka: ', '',
-      ['a/ Váh ', 'b/ Bodrog ', 'c/ Dunajec '], 2),
-  Question('22. Jedna námorná míľa je: ', '',
-      ['a/ 1852 m ', 'b/ 1609,3 m ', 'c/ 1000 m '], 0),
-  Question(
-      '23. Uzol je miera pre meranie: ',
-      '',
-      [
-        'a/ hĺbky ',
-        'b/ rýchlosti plavby na mori ',
-        'c/ rýchlosti a sily vetra '
-      ],
-      1),
-  Question('24. Rýchlosť jeden uzol je: ', '',
-      ['a/ 1,6093 km/h ', 'b/ 1,852 km/h ', 'c/ 1,000 km/h '], 1),
-  Question(
-      '25. Rýchlosť jeden uzol je: ',
-      '',
-      [
-        'a/ 1,0 km/hod ',
-        'b/ 1,0 anglická míľa/hod ',
-        'c/ 1,0 námorná míľa/hod '
-      ],
-      2),
-  Question(
-      '26. Beaufortova stupnica udáva: ',
-      '',
-      [
-        'a/ magnetickú deklináciu ',
-        'b/ rýchlosť a silu vetra ',
-        'c/ rýchlosť a silu prúdu vodného toku '
+        'a) zákony',
+        'b) plavebné opatrenia',
+        'c) plavebné návrhy',
       ],
       1),
   Question(
-      '27. Malý Dunaj tvorí s Dunajom: ',
-      '',
+      '19./ Ustanovenia zákona 338/2000Z.z. o vnútrozemskej plavbe sa na neverejnú dopravu po vodných cestách vzťahujú:',
+      '/',
       [
-        'a/ Veľký Žitný ostrov ',
-        'b/ Malý Žitný ostrov ',
-        'c/ Ostrov Svätého Ondreja '
+        'a) v plnom rozsahu',
+        'b) primerane',
+        'c) nevzťahujú',
       ],
       0),
   Question(
-      '28. Mošonský Dunaj je rameno Dunaja prechádzajúce: ',
-      '',
+      '20./ Prevádzkovateľom plavidla je:',
+      '/',
       [
-        'a/ slovenským územím ',
-        'b/ slovensko - maďarským územím ',
-        'c/ maďarským územím '
+        'a) osoba, ktorú za prevádzkovateľa určil Dopravný úrad rozhodnutím',
+        'b) ten kto vedie plavidlo na vlastnú zodpovednosť',
+        'c) jeho vlastník alebo ten, kto vykonáva prevádzku plavidla vo vlastnom mene a na základe zmluvy s vlastníkom plavidla',
       ],
-      1),
+      2),
   Question(
-      '29. Protipovodňová hrádza je: ',
-      '',
+      '21./ Ktoré plavidlá majú povinnosť niesť počas plavby štátnu vlajku Slovenskej republiky?',
+      '/',
       [
-        'a/ hrádza po obidvoch brehoch vodného toku, zamedzujúca rozliatiu sa vody pri vysokých vodných stavoch a pri povodniach do širokého okolia vodného toku ',
-        'b/ hrádza, rozdeľujúca vodný tok na dve ramená ',
-        'c/ hrádza, postavená kolmo z brehu do vodného toku, za účelom sústredenia prúdu do užšieho prietoku a tým zvýšenie plavebných hĺbok '
+        'a) loď vnútrozemskej plavby, malé plavidlo, ktoré podlieha registrácii, prievozná loď a plávajúci stroj',
+        'b) iba plavidlá, ktoré plávajú v hraničných vodách',
+        'c) iba plavidlá, ktoré plávajú na nesledovaných vodných cestách',
       ],
       0),
   Question(
-      '30. Rosný bod je teplota: ',
-      '',
+      '22./ Ktoré plavidlá podliehajú zápisu do registra plavidiel?',
+      '/',
       [
-        'a/ pri ktorej a začína voda vyparovať ',
-        'b/ je bod varu vody ',
-        'c/ pri ktorej sa vzduch, nasýtený vodnými parami, začína zrážať '
+        'a) len plavidlá s výtlakom nad 100 m3, čiže podliehajú ciachovaniu',
+        'b) plavidlá s výkonom pohonného strojného zariadenia vyšším ako 6 kW, alebo plocha plachiet je väčšia ako 20 m2',
+        'c) plavidlá, ktorých celková hmotnosť vrátane povolenej užitočnej hmotnosti presahuje 1000 kg alebo výkon pohonného strojového zariadenia je väčší ako 4 kW, alebo plocha plachiet je väčšia ako 12 m2, okrem plavidiel určených výlučne na športovú činnosť vykonávanú na vodných plochách vymedzených plavebným opatrením.',
       ],
       2),
   Question(
-      '31. Umelá vodná cesta je: ',
-      '',
+      '23./ Kto a na základe čoho vykonáva výmaz plavidla z registra plavidiel?',
+      '/',
       [
-        'a/ umelo vybudovaná vodná cesta: kanál, prieplav, plavebný most, ktorá spája dve alebo viac prirodzených vodných ciest ',
-        'b/ uzavreté prírodné jazero ',
-        'c/ jazero v horách (morské oko), na ktorom sa uskutočňuje plavba '
+        'a) Ministerstvo dopravy a výstavby SR na základe oznámenia orgánov činných v trestnom konaní',
+        'b) Dopravný úrad len na základe žiadosti vlastníka plavidla alebo v prípade, že rozhodol o jeho trvalom vyradení z prevádzky',
+        'c) odbor dopravy na Ministerstve vnútra SR na základe súdneho nariadenia',
+      ],
+      1),
+  Question(
+      '24./ Možno prevádzkovať malé plavidlo, podliehajúce registrácii, bez uzatvorenia zmluvného poistenia zodpovednosti za škody spôsobené prevádzkou plavidla?',
+      '/',
+      [
+        'a) možno, ale len ak sa jedná o plachetnice prevádzkované na vodných nádržiach a celková plocha plachiet nepresahuje 20m2',
+        'b) plavidlo, ktoré je zapísané do evidencie plavidiel, možno prevádzkovať na vodnej ceste len s uzavretým poistením zodpovednosti za škody spôsobené prevádzkou plavidla.',
+        'c) pokiaľ sa prevádzkuje malé plavidlo na uzatvorených vodných cestách nie je potrebné uzatvoriť poistenia zodpovednosti za škody spôsobené prevádzkou plavidla',
+      ],
+      1),
+  Question(
+      '25./ Lodné osvedčenie malého plavidla, ktoré vydáva Dopravný úrad, má platnosť najviac:',
+      '/',
+      [
+        'a) 10 rokov',
+        'b) 5 rokov',
+        'c) 20 rokov',
+      ],
+      1),
+  Question(
+      '26./ Kto vykonáva odborné vyšetrovanienie plavebnej nehody?',
+      '/',
+      [
+        'a) Dopravný úrad',
+        'b) Policajný zbor Slovenskej republiky',
+        'c) správca vodného toku na ktorom nehoda vznikla',
       ],
       0),
   Question(
-      '32. Vnútrozemské vodné cesty sú: ',
-      '',
+      '27./ Majú plavební inšpektori právo vstupovať na plavidlá počas plavby alebo počas ich státia?',
+      '/',
       [
-        'a/ v rámci jedného štátu ',
-        'b/ vodný tok alebo iná vodná plocha, ako sú povrchové, podzemné a banské vody, ktoré sú splavné pre daný typ plavidla a na ktorých nie je plavba zakázaná ',
-        'c/ vodné cesty vo vnútri jedného štátu, vodné cesty tvoriace prirodzenú alebo umelú štátnu hranicu, sa za také nepovažujú '
+        'a) áno, ale len na plavidlá prevádzkované právnickou osobou',
+        'b) áno, za účelom výkonu štátneho odborného dozoru nad plavbou',
+        'c) nie, len vtedy ak došlo k plavebnej nehode',
       ],
       1),
   Question(
-      '33. Laterárne prieplavy sú: ',
-      '',
+      '28./ Na plavidle Dopravného úradu pri výkone štátneho odborného dozoru nad plavbou:',
+      '/',
       [
-        'a/ umelo vybudované vodné cesty súbežné s hlavnými vodnými tokmi ',
-        'b/ vodné cesty, z ktorých sa môže odčerpávať voda na zavlažovanie ',
-        'c/ prieplavy medzi moriami a oceánmi (Panamský, Suezský) '
-      ],
-      2),
-  Question(
-      '34. Vodočet je: ',
-      '',
-      [
-        'a/ prístroj na meranie rýchlosti prúdenia vody ',
-        'b/ prostriedok na meranie výšky vodnej hladiny v mieste merania ',
-        'c/ prístroj na meranie rýchlosti plavidla '
+        'a) bliká modré svetlo viditeľné zo všetkých strán',
+        'b) bliká žlté svetlo',
+        'c) bliká červené svetlo',
       ],
       0),
   Question(
-      '35. Hydromodul je: ',
-      '',
+      '29./ Technickú prehliadku malého plavidla, ktoré podlieha registráci a súčasne nepodlieha povinnej klasifikácii, vykonáva:',
+      '/',
       [
-        'a/ najvyšší vodný stav, nameraný na určitom vodnom toku alebo uzavretej vodnej ceste ',
-        'b/ najnižší vodný stav, nameraný na určitom vodnom toku alebo uzavretej vodnej ceste ',
-        'c/ výškový rozdiel medzi najvyšším a najnižším vodným stavom v stanovenom mieste '
+        'a) Uznaná klasifikačná spoločnosť',
+        'b) Právnická osoba poverená Ministerstvom dopravy a výstavby SR',
+        'c) Dopravný úrad alebo osoba poverená Dopravným úradom',
       ],
-      1),
+      2),
   Question(
-      '36. Konvexný breh je: ',
-      '',
+      '30./ Register plavidiel je:',
+      '/',
       [
-        'a/ vypuklý breh vodného toku (vnútorný oblúk zákruty toku) ',
-        'b/ vydutý breh vodného toku (kde vodný prúd vymieľa breh) ',
-        'c/ umelo vybudovaný breh vodného toku z kameňa alebo betónu '
+        'a) verejný a každý má právo na základe písomnej žiadosti do neho nahliadať a robiť si z neho výpisy alebo odpisy',
+        'b) neverejne prístupný zoznam',
+        'c) je utajený zoznam',
       ],
       0),
   Question(
-      '37. Konkávny breh je: ',
-      '',
+      '31./ Štátna vlajka Slovenskej republiky môže byť vztýčená na plavidle:',
+      '/',
       [
-        'a/ vypuklý breh vodného toku (kde sa tvorí piesčina) ',
-        'b/ vydutý breh vodného toku (vonkajší oblúk zákruty toku) ',
-        'c/ umelo vybudovaný breh vodného toku z kameňa alebo betónu '
+        'a) stále',
+        'b) len v čase od východu do západu slnka',
+        'c) len v čase štátneho smútku',
       ],
       1),
   Question(
-      '38. Limnigraf je: ',
-      '',
+      '32./ Plavebná nehoda je:',
+      '/',
       [
-        'a/ prístroj na meranie a automatické zapisovanie výšky vodného stavu ',
-        'b/ prístroj na meranie výšky plavebných hĺbok ',
-        'c/ prístroj na meranie rýchlosti plavby '
+        'a) udalosť, ktorá sa stala iba počas prevádzky plavidla, nie v príčinnej súčinnosti s ňou a má za následok výlučne poškodenie alebo zničenie plavidla, jeho súčasti alebo výstroja',
+        'b) udalosť, ktorá sa stala počas prevádzky plavidla alebo v príčinnej súvislosti s ňou a má za následok poškodenie alebo zničenie plavidla, jeho súčasti alebo výstroja, poškodenie alebo zničenie prepravovaného tovaru, ak tieto následky nevyplynuli z povahy samotného nákladu, poškodenie vodnej cesty alebo stavieb na nej alebo spôsobenie ujmy na zdraví či smrť.',
+        'c) udalosť, ktorá sa nestala počas prevádzky plavidla, ale v príčinnej súvislosti s ňou a má za následok poškodenie plavidla alebo vodnej cesty',
+      ],
+      1),
+  Question(
+      '33./ O zriadení a zrušení požičovne malých plavidiel rozhoduje:',
+      '/',
+      [
+        'a) klasifikačná organizácia',
+        'b) Ministerstvo dopravy a výstavby SR',
+        'c) Dopravný úrad',
       ],
       2),
   Question(
-      '39. Absolútny spád vodného toku je: ',
-      '',
+      '34./ Osobitné povolenie na prevádzku plavidla vydáva:',
+      '/',
       [
-        'a/ výškový rozdiel dvoch miest na rieke (rozdiel ich nadmorských výšok) udávaný v percentách ',
-        'b/ výškový rozdiel dvoch miest na rieke (rozdiel ich nadmorských výšok) udávaný v metroch ',
-        'c/ výškový rozdiel dvoch miest na rieke (rozdiel ich nadmorských výšok) udávaný v promilách '
+        'a) vydáva ho Ministerstvo dopravy a vystavby SR na základe žiadosti prevádzkovateľa plavidla na dobu nevyhnutne potrebnú na uskutočnenie jednotlivej plavby, spravidla skúšobnej',
+        'b) vydáva ho Dopravný úrad na základe žiadosti prevádzkovateľa plavidla na dobu nevyhnutne potrebnú',
+        'c) vydáva ho Dopravný úrad na základe žiadosti prevádzkovateľa plavidla na dobu určitú, najviac na päť rokov',
+      ],
+      1),
+  Question(
+      '35./ Plavidlá svojimi vlastnosťami musia vyhovovať:',
+      '/',
+      [
+        'a) iba podmienkam na vodnej ceste',
+        'b) iba Pravidlám bezpečnosti prevádzky plavidla po vnútrozemských vodných cestách Slovenskej republiky',
+        'c) pravidlám bezpečnosti prevádzky plavidla, požiadavkám na bezpečnosť členov posádky plavidla a prepravovaných osôb, pravidlám prepravy nebezpečných tovarov a podmienkam na vodnej ceste',
+      ],
+      2),
+  Question(
+      '36./ Prístaviskom sa rozumie:',
+      '/',
+      [
+        'a) miesto určené na státie a obsluhu plavidiel pri nástupe a výstupe osôb vybavené pevným alebo plávajúcim pristávacím zariadením',
+        'b) vymedzené územie vrátane vodnej časti, stavieb a zariadení, ktoré slúžia na prekladanie, skladovanie, opracovanie a dopravu tovarov, naloďovanie a vyloďovanie cestujúcich a ochranu plavidiel pri prechode ľadochodov a povodňových prietokov, ako aj na vykonávanie činností súvisiacich s prevádzkou plavidiel a ich opravou, rekonštrukciou alebo stavbou',
+        'c) miesto slúžiace na oddych členov posádky plavidla',
       ],
       0),
   Question(
-      '40. Plavebná komora je zariadenia na: ',
-      '',
+      '37./ Prístavom sa rozumie:',
+      '/',
       [
-        'a/ laboratórne skúšanie modelov plavidiel ',
-        'b/ ochranný prístav pre plavidlá proti vetru a povodniam ',
-        'c/ prekonávanie výškových rozdielov hladín nad a pod priehradou plavidlami '
+        'a) miesto vykotvenia plavidiel za účelom ich zazimovania',
+        'b) vymedzené územie vrátane vodnej časti, stavieb a zariadení, ktoré slúžia na prekladanie, skladovanie, opracovanie a dopravu tovarov, naloďovanie a vyloďovanie cestujúcich a ochranu plavidiel pri prechode ľadochodov a povodňových prietokov, ako aj na vykonávanie činností súvisiacich s prevádzkou plavidiel a ich opravou, rekonštrukciou alebo stavbou',
+        'c) miesto slúžiace na oddych členov posádky plavidla',
+      ],
+      1),
+  Question(
+      '38./ Štátny odborný dozor nad dodržiavaním pravidiel bezpečnosti vnútrozemskej plavby vykonáva:',
+      '/',
+      [
+        'a) Policajný zbor Slovenskej republiky',
+        'b) Dopravný úrad',
+        'c) Správca vodného toku, alebo inej vodnej plochy',
+      ],
+      1),
+  Question(
+      '39./ Prevádzkou plavidiel sa podľa zákona 338/2000 Z.z. v znení neskorších predpisov rozumie:',
+      '/',
+      [
+        'a) iba plavba plavidiel na vodných cestách a v prístavoch',
+        'b) iba státie alebo kotvenie plavidiel na vodných cestách alebo v prístavoch',
+        'c) plavba, státie alebo kotvenie plavidiel na vodných cestách alebo v prístavoch',
       ],
       2),
   Question(
-      '41. Kilometráž riek v povodí Dunaja je: ',
-      '',
+      '40./ Ak plavebný inšpektor pri výkone štátneho odborného dozoru nad plavbou zistí u vodcu malého plavidla závažné alebo opakované porušenie zákona o vnútrozemskej plavbe alebo súvisiacich všeobecne záväzných právnych predpisov, môže vodcovi malého plavidla:',
+      '/',
       [
-        'a/ vždy od ústia rieky proti prúdu ',
-        'b/ vždy od prameňa rieky po prúde ',
-        'c/ podľa systému zavedenom správcom toku '
+        'a) zadržať preukaz odbornej spôsobilosti vodcu malého plavidla',
+        'b) zadržať lodné osvedčenie',
+        'c) zadržať klasifikačný preukaz',
       ],
       0),
   Question(
-      '42. Kompas alebo buzola je prístroj na určovanie: ',
-      '',
+      '41./ Ak plavebný inšpektor pri výkone štátneho odborného dozoru nad plavbou zistí závady alebo nedostatky na plavidle, ktoré by mohli ohroziť bezpečnosť prevádzky plavidla, môže vodcovi malého plavidla:',
+      '/',
       [
-        'a/ polohy lode na mori alebo veľkých jazerách, pri zameraní na nebeské telesá ',
-        'b/ smeru a rýchlosti vetra ',
-        'c/ svetových strán '
-      ],
-      1),
-  Question(
-      '43. Sextant je prístroj na určovanie: ',
-      '',
-      [
-        'a/ polohy lode na mori alebo veľkých jazerách, pri zameraní na nebeské telesá ',
-        'b/ smeru a rýchlosti vetra ',
-        'c/ svetových strán '
-      ],
-      1),
-  Question(
-      '44. Anemometer je prístroj na určovanie: ',
-      '',
-      [
-        'a/ polohy lode na mori alebo veľkých jazerách, pri zameraní na nebeské telesá ',
-        'b/ rýchlosti vetra ',
-        'c/ svetových strán '
-      ],
-      2),
-  Question('45. GPS je prístroj na určovanie polohy plavidla na princípe: ', '',
-      ['a/ nebeských telies ', 'b/ satelitov ', 'c/ vodorovných uhlov '], 1),
-  Question(
-      '46. Echolot je prístroj na meranie: ',
-      '',
-      [
-        'a/ ponoru plavidla ',
-        'b/ rýchlosti plavby ',
-        'c/ hĺbky pod dnom plavidla '
-      ],
-      0),
-  Question(
-      '47. Log je prístroj na meranie: ',
-      '',
-      [
-        'a/ hĺbky pod dnom plavidla ',
-        'b/ rýchlosti plavby ',
-        'c/ ponoru plavidla '
-      ],
-      1),
-  Question(
-      '48. Kormidlo je zariadenie na: ',
-      '',
-      [
-        'a/ udržanie a zmenu smeru plavby ',
-        'b/ pohon lode ',
-        'c/ meranie rýchlosti lode '
-      ],
-      2),
-  Question(
-      '49. Pristávanie k pristávaciemu zariadeniu (pontón, mólo) na tečúcej vode sa vykonáva zásadne plavbou: ',
-      '',
-      [
-        'a/ po prúde v ostrom uhle k pristávaciemu zariadeniu ',
-        'b/ proti prúdu ',
-        'c/ kolmo na pristávacie zariadenie alebo breh '
-      ],
-      1),
-  Question(
-      '50. Pri odplávaní od pristávacieho zariadenia (pontón, mólo) na tečúcej vode odviažeme najskôr: ',
-      '',
-      [
-        'a/ predné lano a necháme sa na zadnom lane otočiť do poprúdneho smeru ',
-        'b/ predné lano a spustením motora udržiavame plavidlo v protiprúdnom smere ',
-        'c/ krížne lano, zadné lano, spustíme motor, zaradíme pomalý chod vpred a odviažeme predné lano '
-      ],
-      0),
-  Question(
-      '51. Pri vyplávaní z kľudnej vody bazénu prístavu alebo kanálu plávame vždy: ',
-      '',
-      [
-        'a/ spätným chodom tak, aby nám prúd nestrhol čelo plavidla, s čo najväčšími otáčkami motora ',
-        'b/ predným chodom pri zohľadnení miestnych podmienok a plavebnej premávky ',
-        'c/ kolmo na prúd tečúcej vody, čo najväčšou rýchlosťou '
-      ],
-      1),
-  Question(
-      '52. Traverzové preplávanie prúdu (z jedného brehu k druhém ) je: ',
-      '',
-      [
-        'a/ nastavenie plavidla v protiprúdnom smere asi 45° proti osi prúdu s primeraným použitím propulzného zariadenia ',
-        'b/ plavba kolmo na prúd vodného toku ',
-        'c/ plavba po prúde, kde si pomáhame spätným chodom '
-      ],
-      2),
-  Question(
-      '53. Pri zvlnenej vodnej hladine prechádzame vlnami pokiaľ možno vždy: ',
-      '',
-      [
-        'a/ kolmo na vlny a vždy čo najväčšou rýchlosťou ',
-        'b/ kolmo na vlny zníženou rýchlosťou ',
-        'c/ pod uhlom 30° k preplávajúcej vlne a čo najväčšou rýchlosťou '
-      ],
-      0),
-  Question(
-      '54. Príliv a odliv na mori je spôsobený: ',
-      '',
-      [
-        'a/ rotáciou Zeme okolo svojej osi ',
-        'b/ príťažlivou silou Mesiaca a Marsu ',
-        'c/ príťažlivou silou Slnka a Mesiaca '
-      ],
-      2),
-  Question(
-      '55. Plavebnú nehodu je potrebné v každom prípade nahlásiť: ',
-      '',
-      [
-        'a/ Dopravnému úradu, ak škoda nevznikla len na plavidle alebo škoda vznikla len na plavidle a prevyšuje 10 000,- € ',
-        'b/ polícii a správcovi toku ',
-        'c/ správcovi stavby '
-      ],
-      0),
-  Question('56. Poškodenie CASCO (kasko) znamená poškodenie: ', '',
-      ['a/ plavidla aj tovaru ', 'b/ tovaru a osôb ', 'c/ plavidla '], 2),
-  Question(
-      '57. Poškodenie CARGO (kargo) znamená poškodenie: ',
-      '',
-      ['a/ nákladu a osôb ', 'b/ plavidla ', 'c/ plavidla aj tovaru a osôb '],
-      1),
-  Question(
-      '58. S plavidlom pristávame: ',
-      '',
-      [
-        'a/ po vetre ',
-        'b/ po vetre a proti prúdu',
-        'c/ podľa možnosti proti vetru a proti prúdu '
-      ],
-      2),
-  Question(
-      '59. Balast je: ',
-      '',
-      [
-        'a/ umelá záťaž, slúžiaca na zvýšenie ťažiska ',
-        'b/ umelá záťaž, vyrovnávajúca (stabilizujúca) polohu plavidla v pozdĺžnej aj priečnej osi ',
-        'c/ umelá záťaž, slúžiaca na zmenšenie metacentrickej výšky '
-      ],
-      1),
-  Question(
-      '60. Zemepisná šírka označuje: ',
-      '',
-      [
-        'a/ uhol medzi nultým (Greenwichským) poludníkom a určitým bodom na východnej alebo západnej pologuli ( 0° - 180° ) ',
-        'b/ poludník ',
-        'c/ uhol medzi rovníkom a príslušnou polohou určitého bodu na severnej alebo južnej pologuli (0°- ',
-        '90°) '
-      ],
-      2),
-  Question(
-      '61. Zemepisná dĺžka označuje: ',
-      '',
-      [
-        'a/ uhol medzi rovníkom a príslušnou polohou určitého bodu na severnej alebo južnej pologuli (0°- ',
-        '90°) ',
-        'b/ uhol medzi nultým (Greenwichským) poludníkom a určitým bodom na východnej alebo západnej pologuli ( 0° - 180° ) ',
-        'c/ rovnobežku '
-      ],
-      1),
-  Question('62. Trimaran je plavidlo: ', '',
-      ['a/ s jedným trupom ', 'b/ s dvoma trupmi ', 'c/ s troma trupmi '], 2),
-  Question('63. Katamaran je plavidlo: ', '',
-      ['a/ s jedným trupom ', 'b/ s dvoma trupmi ', 'c/ s troma trupmi '], 0),
-  Question(
-      '64. Akčný rádius je: ',
-      '',
-      [
-        'a/ polomer otáčania sa plavidiel ',
-        'b/ polomer zákrut na vodnom toku ',
-        'c/ vzdialenosť, kam až môže plavidlo doplávať vzhľadom k spotrebe pohonných hmôt a zásob '
-      ],
-      0),
-  Question(
-      '65. Balastná nádrž je umiestnená: ',
-      '',
-      [
-        'a/ v trupe plavidla (steny a dno), slúži na vyrovnávanie - stabilizáciu náklonov plavidla ',
-        'b/ v trupe plavidla (steny a dno) slúži na reguláciu ponoru a zaistenie stability plavidla pri plavbe plne naloženého plavidla na mori ',
-        'c/ v trupe plavidla (steny a dno) slúži na reguláciu ponoru a zaistenie stability plavidla pri plavbe plne naloženého plavidla na riekach a jazerách '
-      ],
-      1),
-  Question(
-      '66. Signálna bója je: ',
-      '',
-      [
-        'a/ ukotvené duté teleso, ktoré plní výlučne úlohy na označenie iba ostrovov a ramien vodnej cesty ',
-        'b/ zariadenie slúžiace iba na vyviazanie plavidiel ',
-        'c/ ukotvené duté teleso, ktoré plní úlohy na označenie vodnej cesty '
-      ],
-      2),
-  Question(
-      '67. Cyklón na severnej pologuli je: ',
-      '',
-      [
-        'a/ víchor, prejavujúci sa vírom točiacim sa proti smeru hodinových ručičiek, vznikajúci v extrémne nízkom barometrickom tlaku, postupuje spravidla severovýchodným smerom - veľmi nebezpečný ',
-        'pre plavidlá ',
-        'b/ víchor, prejavujúci sa vírom točiacim sa v smere hodinových ručičiek, vznikajúci v extrémne nízkom barometrickom tlaku, postupuje spravidla juhovýchodným smerom - veľmi nebezpečný pre ',
-        'plavidlá ',
-        'c/ víchor, prejavujúci sa vírom točiacim sa v smere hodinových ručičiek, vznikajúci v extrémne nízkom barometrickom tlaku, postupuje spravidla severozápadným smerom - veľmi nebezpečný hlavne pre pobrežné stavby '
-      ],
-      0),
-  Question(
-      '68. Goniometer je prístroj používaný na zisťovanie polohy lode na princípe: ',
-      '',
-      [
-        'a/ vodorovných uhlov ',
-        'b/ priestorových uhlov ',
-        'c/ kurzu plavidla k nebeským telesám '
-      ],
-      1),
-  Question(
-      '69. Gyrokompas je: ',
-      '',
-      [
-        'a/ buzola na určovanie svetových strán ',
-        'b/ zotrvačníkový kompas, ktorý ukazuje sever nezávisle na magnetickom poli plavidla ',
-        'c/ prístroj na zisťovanie polohy lode na mori voči nebeským telesám '
-      ],
-      2),
-  Question(
-      '70. Kokpit je priestor v malom plavidle: ',
-      '',
-      [
-        'a/ medzi lodným dnom a podlahou plavidla ',
-        'b/ priestor, kde sa nachádza lodný motor ',
-        'c/ nekrytý priestor pre posádku '
-      ],
-      1),
-  Question(
-      '71. Kolízny priestor je priestor nachádzajúci sa na plavidle: ',
-      '',
-      [
-        'a/ vodotesne oddelený na čele (predný) alebo na korme (zadný), ktorý má za úlohu zachytiť časť síl pôsobiacich pri náraze plavidla ',
-        'b/ na bokoch plavidla (pravý a ľavý), ktorý má za úlohu zachytiť časť síl pôsobiacich pri náraze plavidla ',
-        'c/ na dne plavidla, ktorý má za úlohu zachytiť časť síl pôsobiacich pri náraze alebo nasadnutí plavidla '
-      ],
-      2),
-  Question(
-      '72. Kýl je: ',
-      '',
-      [
-        'a/ základný priečny nosník lodného trupu - rebro ',
-        'b/ základný pozdĺžny nosník lodného trupu - opora rebier a prechádza od čela po kormu plavidla ',
-        'c/ hlavný stožiar na plachetniciach '
-      ],
-      2),
-  Question(
-      '73. Log je prístroj na meranie: ',
-      '',
-      [
-        'a/ polohy lode podľa hviezd ',
-        'b/ hĺbky vody pod dnom plavidla ',
-        'c/ rýchlosti lode '
-      ],
-      0),
-  Question(
-      '74. Marža je vzdialenosť medzi: ',
-      '',
-      [
-        'a/ bokom plavidla a najbližším brehom ',
-        'b/ dnom plavidla a dnom vodnej cesty ',
-        'c/ najvyšším pevným bodom na plavidle a najnižším podjazdným bodom, napríklad mostného otvoru, lanom prievozu alebo elektrickým vedením '
-      ],
-      1),
-  Question(
-      '75. Mercatorove mapy sú mapy pre námorné plavbu: ',
-      '',
-      [
-        'a/ s hyperbolickou projekciou ',
-        'b/ s parabolickou projekciou ',
-        'c/ zobrazujúce poludníky a rovnobežky ako priamky '
-      ],
-      2),
-  Question(
-      '76. Nautika je náuka o: ',
-      '',
-      [
-        'a/ stabilite plavidla ',
-        'b/ stavbe plavidla ',
-        'c/ plavbe a plavidle '
-      ],
-      2),
-  Question(
-      '77. Nosnosť plavidla je hmotnosť: ',
-      '',
-      [
-        'a/ lodného nákladu alebo cestujúcich, zásob, vody, paliva, posádky - t.j. rozdiel medzi prázdnou a naloženou loďou ',
-        'b/ iba lodného telesa ',
-        'c/ zásob, paliva, vody, posádky, cestujúcich '
-      ],
-      0),
-  Question(
-      '78. Pasát je vietor: ',
-      '',
-      [
-        'a/ teplý, vanúci z južnej Európy cez Alpy na sever, spôsobujúci topenie snehu a ľadu v Alpách ',
-        'b/ prevládajúcí v tropických oblastiach, pravidelne a rovnomerne vanúci vietor po celý rok ',
-        'c/ studený, vanúci zo severnej Európy na juh v zimnom období '
-      ],
-      1),
-  Question(
-      '79. Fén je vietor: ',
-      '',
-      [
-        'a/ celoročný vietor, ktorý vanie od subtropických oblastí k rovníku, spôsobený tepelnou cirkuláciou Zeme ',
-        'b/ studený, vanúci zo severnej Európy na juh v zimnom období ',
-        'c/ teplý, vanúci z juhu cez Alpy na sever '
-      ],
-      1),
-  Question(
-      '80. Periskop je zariadenie na: ',
-      '',
-      [
-        'a/ zisťovanie mín a iných výbušných nástražných systémov ',
-        'b/ lodný ďalekohľad ',
-        'c/ používanie na ponorkách - optický prístroj založený na princípe šošoviek a zrkadiel '
-      ],
-      2),
-  Question(
-      '81. Remorkáž je: ',
-      '',
-      [
-        'a/ vlečenie alebo tlačenie plavidiel ',
-        'b/ plavba samostatne plávajúcich plavidiel ',
-        'c/ plavba samosplavom '
-      ],
-      2),
-  Question(
-      '82. Obrat (rondo) znamená: ',
-      '',
-      [
-        'a/ plavba proti prúdu ',
-        'b/ obrat plavidla alebo zostavy ',
-        'c/ plavba po prúde '
-      ],
-      1),
-  Question(
-      '83. Trajekt je: ',
-      '',
-      [
-        'a/ plavidlo prispôsobené len na prevoz lietadiel ',
-        'b/ plavidlo prispôsobené na prevoz nebezpečných nákladov ',
-        'c/ námorná prievozná loď '
-      ],
-      2),
-  Question(
-      '84. Pilot (lodivod) v námornom ponímaní je odborník na: ',
-      '',
-      [
-        'a/ stavbu lodí ',
-        'b/ odborne spôsobilá osoba určená na manévrovanie a vedenie plavidiel v určitom prístave alebo na určitej vodnej ceste ',
-        'c/ vedenie lode na mori '
-      ],
-      0),
-  Question(
-      '85. V zákrutách pri veľkých rýchlostiach plavidiel pôsobí odstredivá sila na plavidlo tak, že: ',
-      '',
-      [
-        'a/ ho vynáša smerom dovnútra - zmenšuje polomer otáčania alebo zatáčania ',
-        'b/ plavidlo stojí pevne v svojej plavebnej dráhe ',
-        'c/ ho vynáša smerom von - zväčšuje polomer otáčania alebo zatáčania '
-      ],
-      2),
-  Question(
-      '86. Vodca plavidla musí pri plavbe zohľadniť: ',
-      '',
-      [
-        'a/ prúd a silu vodného toku, plavebnú prevádzku na vodnom toku a poveternostné podmienky ako vietor a hmla ',
-        'b/ iba silu a smer vetra ',
-        'c/ iba poveternostné podmienky ako hmla a jej hustota '
-      ],
-      0),
-  Question(
-      '87. Klzák je plavidlo: ',
-      '',
-      [
-        'a/ na nosných krídlach ',
-        'b/ na vzdušných vankúšoch ',
-        'c/ s dnom takého tvaru, na ktorom prúd vody môže vyvinúť pri danej rýchlosti dostatočný hydrodynamický vztlak, pôsobiaci zvisle na dno plavidla '
-      ],
-      2),
-  Question(
-      '88. Vodomet ja zariadenie: ',
-      '',
-      [
-        'a/ ktoré svojim propulzným zariadením prečerpáva vodu od dna plavidla a vysokým tlakom ju vytláča za plavidlo v určitom smere, čím spôsobuje chod dopredu ',
-        'b/ zariadenie na prevzdušňovanie a okysličovanie stojatých vôd ',
-        'c/ protipožiarne zariadenie '
-      ],
-      2),
-  Question(
-      '89. Propulzné zariadenie je najvýhodnejšie umiestniť: ',
-      '',
-      [
-        'a/ na čele plavidla ',
-        'b/ na pravom boku plavidla ',
-        'c/ na korme plavidla '
-      ],
-      1),
-  Question(
-      '90. Propulzor je: ',
-      '',
-      [
-        'a/ zariadenie potrebné na kotvenie plavidiel po vodnej ploche - klzáky ',
-        'b/ zariadenie potrebné na plachtenie plavidiel po vodnej ploche ',
-        'c/ zariadenie na pohon plavidla '
-      ],
-      1),
-  Question(
-      '91. Manévrovateľnosť plavidla s propulzorom umiestneným na korme je pri spätnom chode: ',
-      '',
-      [
-        'a/ rovnaká ako pri vchode vpred ',
-        'b/ horšia ako pri vchode vpred ',
-        'c/ lepšia ako pri vchode vpred '
-      ],
-      1),
-  Question(
-      '92. Dokormidlovacie zariadenia môžu používať: ',
-      '',
-      [
-        'a/ iba malé plavidlá ',
-        'b/ všetky plavidlá ',
-        'c/ iba plávajúce stroje - bagre '
-      ],
-      0),
-  Question(
-      '93. Smerová stabilita plavidla je: ',
-      '',
-      [
-        'a/ schopnosť plavidla pri plavbe udržiavať sa v danom kurze bez ohľadu na vonkajšie vplyvy ',
-        'b/ schopnosť posádky udržiavať plavidlo v danom kurze ',
-        'c/ schopnosť plavidla nepodliehať vonkajším vlyvom, pôsobiacim na jeho kurz (vietor, prúd, smer otáčania vrtule, natočenie kormidelnej plutvy) '
-      ],
-      0),
-  Question(
-      '94. Ovládateľnosť plavidla je: ',
-      '',
-      [
-        'a/ schopnosť plavidla účinne a rýchle meniť smer a rýchlosť plavby ',
-        'b/ schopnosť vodcu plavidla ovládať ho aj za silnej búrky ',
-        'c/ je schopnosť posádky zachrániť plavidlo pri náhodnej kolízii s prekážkou na vodnej ceste '
-      ],
-      1),
-  Question(
-      '95. Lodivodská služba je: ',
-      '',
-      [
-        'a/ pohyb plavidiel po vodných cestách ',
-        'b/ vedenie plavidla lodivodom na nebezpečných a obtiažnych plavebných úsekoch ',
-        'c/ plavba po vnútrozemských vodných cestách '
-      ],
-      1),
-  Question(
-      '96. Nautika je: ',
-      '',
-      [
-        'a/ náuka o pohonnom zariadení ',
-        'b/ náuka o stavbe lodí ',
-        'c/ náuka o vedení plavidiel '
-      ],
-      1),
-  Question(
-      '97. Navigácia je: ',
-      '',
-      [
-        'a/ náuka o stavbe lodí ',
-        'b/ určovanie polohy lodi za účelom stanovovania smeru plavby ',
-        'c/ plavebné obdobie (leto, zima) '
-      ],
-      2),
-  Question(
-      '98. Kabotáž je: ',
-      '',
-      [
-        'a/ riečna plavba ',
-        'b/ námorná plavba ',
-        'c/ príbrežná plavba pozdĺž pobrežia '
+        'a) zadržať preukaz odbornej spôsobilosti vodcu malého plavidla',
+        'b) zadržať lodné osvedčenie alebo osvedčenie o schválení plavidla',
+        'c) zadržať klasifikačný preukaz',
       ],
       1),
 ];

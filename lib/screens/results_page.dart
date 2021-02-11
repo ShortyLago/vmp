@@ -77,7 +77,7 @@ class _ResultPageState extends State<ResultPage> {
             ),
           ),
           Expanded(
-            // flex: 2,
+            // flex: 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
@@ -93,15 +93,21 @@ class _ResultPageState extends State<ResultPage> {
             ),
           ),
           Expanded(
-            flex: generator.getQuestionImage() == '' ? 0 : 1,
+            flex: generator.getQuestionImage() == '' ||
+                    generator.getQuestionImage() == '/'
+                ? 0
+                : 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: Image(
-                  image: AssetImage(
-                    generator.getQuestionImage(),
-                  ),
-                ),
+                child: generator.getQuestionImage() == '' ||
+                        generator.getQuestionImage() == '/'
+                    ? Text('')
+                    : Image(
+                        image: AssetImage(
+                          generator.getQuestionImage(),
+                        ),
+                      ),
               ),
             ),
           ),
