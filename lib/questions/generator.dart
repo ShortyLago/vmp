@@ -51,7 +51,7 @@ class Generator {
       for (var i = 0; i < randomZakon.length; i++) {
         _questionBank.add(questionsZakon[randomZakon[i]]);
       }
-      // Zemepis
+      // ZEMEPIS
       for (var i = 0; i < 4; i++) {
         int randomNum = rng.nextInt(questionsZemepis.length);
         while (randomZemepis.contains(randomNum)) {

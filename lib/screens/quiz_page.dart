@@ -112,7 +112,7 @@ class _QuizPageState extends State<QuizPage> {
             flex: generator.getQuestionImage() == '' ||
                     generator.getQuestionImage() == '/'
                 ? 0
-                : 1,
+                : 2,
             child: Center(
               child: generator.getQuestionImage() == '' ||
                       generator.getQuestionImage() == '/'

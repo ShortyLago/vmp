@@ -96,7 +96,7 @@ class _ResultPageState extends State<ResultPage> {
             flex: generator.getQuestionImage() == '' ||
                     generator.getQuestionImage() == '/'
                 ? 0
-                : 1,
+                : 2,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(

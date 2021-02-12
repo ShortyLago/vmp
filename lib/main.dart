@@ -13,6 +13,7 @@ class VMP extends StatelessWidget {
     ]);
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
         primaryColor: Color(0xFF0288D1),
         scaffoldBackgroundColor: Color(0xFF03A9F4),
