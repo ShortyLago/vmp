@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,8 +17,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        // automaticallyImplyLeading: false,
+        title: AutoSizeText(
           'Vodca Malého Plavidla',
+          style: kOptionTextButton,
+          maxLines: 1,
         ),
       ),
       body: Column(
@@ -26,9 +30,10 @@ class _HomePageState extends State<HomePage> {
           Container(
             alignment: Alignment.center,
             height: 300.0,
-            child: Text(
+            child: AutoSizeText(
               'Vyberte kategóriu testu:',
-              style: kTitleTextButton,
+              style: kQuestionTextButton,
+              maxLines: 1,
               // textAlign: TextAlign.center,
             ),
           ),
@@ -44,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
               },
-              buttonColour: Colors.white,
+              buttonColour: Color(0xFF303F9F),
             ),
           ),
           Expanded(
@@ -59,7 +64,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
               },
-              buttonColour: Colors.blue.shade800,
+              buttonColour: Color(0xFF3F51B5),
             ),
           ),
           Expanded(
@@ -74,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
               },
-              buttonColour: Colors.blue,
+              buttonColour: Color(0xFF448AFF),
             ),
           ),
           Expanded(
@@ -89,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
               },
-              buttonColour: Colors.red,
+              buttonColour: Color(0xFF03A9F4),
             ),
           ),
           SizedBox(

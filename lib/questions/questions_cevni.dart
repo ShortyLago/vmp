@@ -561,7 +561,7 @@ List<Question> questionsCevni = [
       0),
   Question(
       '63. Katamaran je plavidlo: ',
-      '',
+      '/',
       [
         'a/ s jedným trupom',
         'b/ s dvoma trupmi',
@@ -2081,15 +2081,6 @@ List<Question> questionsCevni = [
       ],
       0),
   Question(
-      '36. Môže sa pri vedení plavidla v zmysle CEVNI jeho vodca nachádzať v stave únavy alebo omámenia?',
-      '/',
-      [
-        'A. môže, ak nespal pred vedením plavidla viac ako 6 hodín',
-        'B. vodca plavidla nesmie riadiť plavidlo v stave únavy alebo omámenia',
-        'C. pri vedení plavidla sa môže nachádzať v stave únavy alebo omámenia, ak má kvalifikovanú posádku',
-      ],
-      2),
-  Question(
       '233. Čo znamená, keď vidíte signalizovať krúžením vlajkou alebo iným vhodným predmetom?',
       '/',
       [
@@ -2410,7 +2401,7 @@ List<Question> questionsCevni = [
       [
         'A. „Signál núdze“',
         'B. „Plavidlo mieni vyplávať z prístavu“',
-        '„Plávam doľava“',
+        'C. „Plávam doľava“',
       ],
       0),
   Question(

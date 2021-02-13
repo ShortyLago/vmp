@@ -1,3 +1,6 @@
+import 'dart:ui';
+
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:vmp/components/buttons.dart';
@@ -33,12 +36,32 @@ class _QuizPageState extends State<QuizPage> {
       if (generator.isFinished() == true) {
         Alert(
           context: context,
-          type: generator.getVerdict() ? AlertType.success : AlertType.error,
-          title: generator.getVerdict() ? 'Gratulujem!' : 'Ľutujem',
-          desc: 'Počet správne zodpovedaných otázok: ' +
-              generator.getResult().toString() +
-              '\nMinimálny počet: ' +
-              generator.getMinimum(),
+          style: alertStyle,
+          // type: generator.getVerdict() ? AlertType.info : AlertType.info,
+          title: generator.getVerdict()
+              ? 'AI AI Captain!\nGratulujem!'
+              : 'TEST CEZ PALUBU!\nĽutujem',
+          content: Column(
+            children: [
+              Icon(
+                generator.getVerdict() ? Icons.check : Icons.close,
+                color: kTextColour,
+                size: 50.0,
+              ),
+              Text(
+                'Počet správne zodpovedaných otázok: ' +
+                    generator.getResult().toString() +
+                    '\nMinimálny počet: ' +
+                    generator.getMinimum(),
+                style: kAlertTextButton,
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+          // desc: 'Počet správne zodpovedaných otázok: ' +
+          //     generator.getResult().toString() +
+          //     '\nMinimálny počet: ' +
+          //     generator.getMinimum(),
           buttons: [
             DialogButton(
               child: Text(
@@ -55,7 +78,7 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                 );
               },
-              color: Color.fromRGBO(0, 179, 134, 1.0),
+              color: kDefaultColorButton,
             ),
             DialogButton(
               child: Text(
@@ -70,7 +93,7 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                 );
               },
-              color: Colors.red,
+              color: Color(0xFF303F9F),
             ),
           ],
         ).show();
@@ -84,42 +107,62 @@ class _QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: AutoSizeText(
           'Vodca malého plavidla',
+          style: kOptionTextButton,
+          maxLines: 1,
         ),
+        automaticallyImplyLeading: false,
+        actions: [
+          TextButton(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(
+                'MENU',
+                style: kOptionTextButton,
+                textAlign: TextAlign.right,
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
-            // flex: 1,
+            flex: generator.getQuestionImage() == '/' ? 2 : 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
                 child: Text(
                   generator.getQuestionText(),
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 25.0,
-                    color: Colors.black,
-                  ),
+                  style: kQuestionTextButton,
                 ),
               ),
             ),
           ),
           Expanded(
-            flex: generator.getQuestionImage() == '' ||
-                    generator.getQuestionImage() == '/'
-                ? 0
-                : 2,
+            flex: generator.getQuestionImage() == '/' ? 0 : 2,
             child: Center(
-              child: generator.getQuestionImage() == '' ||
-                      generator.getQuestionImage() == '/'
+              child: generator.getQuestionImage() == '/'
                   ? Text('')
-                  : Image(
-                      image: AssetImage(
-                        generator.getQuestionImage(),
+                  : Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Image(
+                        image: AssetImage(
+                          generator.getQuestionImage(),
+                        ),
+                        fit: BoxFit.contain,
                       ),
                     ),
             ),

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vmp/constants.dart';
@@ -20,13 +21,14 @@ class MainButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         child: Center(
-          child: Text(
+          child: AutoSizeText(
             buttonTitle,
-            style: kTitleTextButton,
+            style: kQuestionTextButton,
+            maxLines: 1,
           ),
         ),
         margin: EdgeInsets.all(10.0),
-        // padding: EdgeInsets.all(20.0),
+        padding: EdgeInsets.all(20.0),
         width: double.infinity,
         height: kBottomContainerHeight,
         decoration: BoxDecoration(
@@ -63,18 +65,18 @@ class _OptionButtonState extends State<OptionButton> {
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
         color: widget.colour,
-        border: Border.all(
-          color: Colors.black,
-          width: 2,
-        ),
+        // border: Border.all(
+        //   color: Colors.black,
+        //   width: 2,
+        // ),
         borderRadius: BorderRadius.circular(12),
       ),
       child: FlatButton(
         // textColor: Colors.black,
-        child: Text(
+        child: AutoSizeText(
           widget.questionOptionText,
           textAlign: TextAlign.center,
-          style: kOptionsTextButton,
+          style: kOptionTextButton,
         ),
         onPressed: widget.onPressed,
       ),

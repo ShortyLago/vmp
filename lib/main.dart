@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vmp/screens/home_page.dart';
 
+import 'constants.dart';
+
 void main() => runApp(VMP());
 
 class VMP extends StatelessWidget {
@@ -15,12 +17,12 @@ class VMP extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light().copyWith(
-        primaryColor: Color(0xFF0288D1),
-        scaffoldBackgroundColor: Color(0xFF03A9F4),
-        buttonColor: Color(0xFF009688),
+        primaryColor: kDefaultColorButton,
+        scaffoldBackgroundColor: kBackgroundColour,
+        // buttonColor: Color(0xFF009688),
       ),
       home: Scaffold(
-        backgroundColor: Colors.blue[600],
+        backgroundColor: kBackgroundColour,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),

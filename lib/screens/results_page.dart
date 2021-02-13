@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vmp/components/buttons.dart';
@@ -42,71 +43,80 @@ class _ResultPageState extends State<ResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: AutoSizeText(
           'Vodca malého plavidla',
+          style: kOptionTextButton,
+          maxLines: 1,
         ),
+        automaticallyImplyLeading: false,
+        actions: [
+          TextButton(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(
+                'MENU',
+                style: kOptionTextButton,
+                textAlign: TextAlign.right,
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(20.0),
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              color: Colors.redAccent,
-              border: Border.all(
-                color: Colors.black,
-                width: 2,
-              ),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: FlatButton(
-              child: Text(
-                'HLAVNÉ MENU',
-                style: kOptionsTextButton,
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HomePage(),
-                  ),
-                );
-              },
-            ),
-          ),
+          // Container(
+          //   margin: EdgeInsets.all(20.0),
+          //   color: Color(0xFF2196F3),
+          //   child: FlatButton(
+          //     child: Text(
+          //       'HLAVNÉ MENU',
+          //       style: kOptionTextButton,
+          //     ),
+          //     onPressed: () {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //           builder: (context) => HomePage(),
+          //         ),
+          //       );
+          //     },
+          //   ),
+          // ),
           Expanded(
-            // flex: 1,
+            flex: generator.getQuestionImage() == '/' ? 2 : 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: Text(
+                child: AutoSizeText(
                   generator.getQuestionText(),
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 25.0,
-                    color: Colors.black,
-                  ),
+                  style: kQuestionTextButton,
                 ),
               ),
             ),
           ),
           Expanded(
-            flex: generator.getQuestionImage() == '' ||
-                    generator.getQuestionImage() == '/'
-                ? 0
-                : 2,
+            flex: generator.getQuestionImage() == '/' ? 0 : 2,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: generator.getQuestionImage() == '' ||
-                        generator.getQuestionImage() == '/'
+                child: generator.getQuestionImage() == '/'
                     ? Text('')
                     : Image(
                         image: AssetImage(
                           generator.getQuestionImage(),
                         ),
+                        fit: BoxFit.contain,
                       ),
               ),
             ),
@@ -115,17 +125,17 @@ class _ResultPageState extends State<ResultPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blueAccent,
+                  color: kDefaultColorButton,
                 ),
                 child: IconButton(
                   padding: EdgeInsets.all(20.0),
                   alignment: Alignment.centerLeft,
                   icon: Icon(
                     Icons.arrow_back,
-                    color: Colors.white,
+                    color: kTextColour,
                   ),
                   tooltip: 'Predchádzajúca otázka',
                   onPressed: () {
@@ -138,26 +148,26 @@ class _ResultPageState extends State<ResultPage> {
               generator.getAttempt() == generator.getCorrectAnswer()
                   ? Icon(
                       Icons.check,
-                      color: Colors.green,
+                      color: kTextColour,
                       size: 50.0,
                     )
                   : Icon(
                       Icons.close,
-                      color: Colors.red,
+                      color: kTextColour,
                       size: 50.0,
                     ),
               Container(
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blueAccent,
+                  color: kDefaultColorButton,
                 ),
                 child: IconButton(
                   padding: EdgeInsets.all(20.0),
                   alignment: Alignment.centerRight,
                   icon: Icon(
                     Icons.arrow_forward,
-                    color: Colors.white,
+                    color: kTextColour,
                   ),
                   tooltip: 'Následujúca otázka',
                   onPressed: () {

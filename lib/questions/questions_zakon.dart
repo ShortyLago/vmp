@@ -142,7 +142,7 @@ List<Question> questionsZakon = [
       [
         'a) áno',
         'b) nie, ak škoda vznikla len na vodnej ceste',
-        'c) nie, ak škoda vznikla len na plavidle a zrejme nepresahuje hodnotu 10 000 €',
+        'c) nie, ak škoda vznikla len na plavidle a zrejme nepresahuje hodnotu \n10 000 €',
       ],
       2),
   Question(

@@ -196,7 +196,7 @@ List<Question> questionsElektro = [
       [
         'a/ veslá, vietor, poťah z brehu, spaľovací alebo elektrický motor a pod.',
         'b/ iba motor a plachty',
-        'iba poťah z brehu, veslá a motor',
+        'c/ iba poťah z brehu, veslá a motor',
       ],
       0),
   Question(
@@ -295,7 +295,7 @@ List<Question> questionsElektro = [
       [
         'a/ striedavé 500 V',
         'b/ jednosmerné 380 V',
-        'jednosmerné 24 V',
+        'c/ jednosmerné 24 V',
       ],
       2),
   Question(
@@ -528,8 +528,8 @@ List<Question> questionsElektro = [
       '/',
       [
         'a/ v obytných priestoroch plavidla',
-        'b/ v balastnom tanku'
-            'c/ tak, aby bola oddelená od obytných priestorov',
+        'b/ v balastnom tanku',
+        'c/ tak, aby bola oddelená od obytných priestorov',
       ],
       2),
   Question(
