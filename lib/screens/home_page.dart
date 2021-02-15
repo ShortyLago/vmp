@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         // automaticallyImplyLeading: false,
         title: AutoSizeText(
-          'Vodca Malého Plavidla',
+          'Vodca malého plavidla',
           style: kOptionTextButton,
           maxLines: 1,
         ),
@@ -27,14 +27,17 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            alignment: Alignment.center,
-            height: 300.0,
-            child: AutoSizeText(
-              'Vyberte kategóriu testu:',
-              style: kQuestionTextButton,
-              maxLines: 1,
-              // textAlign: TextAlign.center,
+          Expanded(
+            flex: 3,
+            // alignment: Alignment.center,
+            // height: 300.0,
+            child: Center(
+              child: AutoSizeText(
+                'Vyberte kategóriu testu:',
+                style: kQuestionTextButton,
+                maxLines: 1,
+                // textAlign: TextAlign.center,
+              ),
             ),
           ),
           Expanded(

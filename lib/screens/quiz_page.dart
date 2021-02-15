@@ -21,12 +21,9 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   Generator generator;
-  // Generator generator;
   List<Question> questions;
 
   _QuizPageState({@required this.generator}) {
-    // generator = Generator(quizType: quizType);
-    // questions = generator.questionBank;
     generator = this.generator;
   }
 
@@ -111,6 +108,12 @@ class _QuizPageState extends State<QuizPage> {
           'Vodca malého plavidla',
           style: kOptionTextButton,
           maxLines: 1,
+        ),
+        leading: Center(
+          child: Text(
+            generator.questionPossition(),
+            style: kOptionTextButton,
+          ),
         ),
         automaticallyImplyLeading: false,
         actions: [

@@ -108,6 +108,22 @@ class Generator {
     }
   }
 
+  String questionPossition() {
+    return (_questionNumber + 1).toString() +
+        '/' +
+        (_questionBank.length).toString();
+  }
+
+  int resultPosition() {
+    if (_questionNumber == 0) {
+      return 0;
+    } else if (_questionNumber == _questionBank.length - 1) {
+      return 1;
+    } else {
+      return 2;
+    }
+  }
+
   int getAttempt() {
     return _answers[_questionNumber];
   }

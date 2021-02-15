@@ -17,7 +17,7 @@ const kBackgroundColour = Color(0xFF2196F3);
 
 const kAlertTextButton = TextStyle(
   color: kTextColour,
-  fontSize: 20,
+  fontSize: 20.0,
   height: 1,
 );
 

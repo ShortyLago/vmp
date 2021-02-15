@@ -48,6 +48,12 @@ class _ResultPageState extends State<ResultPage> {
           style: kOptionTextButton,
           maxLines: 1,
         ),
+        leading: Center(
+          child: Text(
+            generator.questionPossition(),
+            style: kOptionTextButton,
+          ),
+        ),
         automaticallyImplyLeading: false,
         actions: [
           TextButton(
@@ -74,24 +80,6 @@ class _ResultPageState extends State<ResultPage> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          // Container(
-          //   margin: EdgeInsets.all(20.0),
-          //   color: Color(0xFF2196F3),
-          //   child: FlatButton(
-          //     child: Text(
-          //       'HLAVNÉ MENU',
-          //       style: kOptionTextButton,
-          //     ),
-          //     onPressed: () {
-          //       Navigator.push(
-          //         context,
-          //         MaterialPageRoute(
-          //           builder: (context) => HomePage(),
-          //         ),
-          //       );
-          //     },
-          //   ),
-          // ),
           Expanded(
             flex: generator.getQuestionImage() == '/' ? 2 : 1,
             child: Padding(
@@ -128,21 +116,32 @@ class _ResultPageState extends State<ResultPage> {
                 margin: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: kDefaultColorButton,
+                  color: generator.resultPosition() == 0
+                      ? kBackgroundColour
+                      : kDefaultColorButton,
                 ),
                 child: IconButton(
                   padding: EdgeInsets.all(20.0),
                   alignment: Alignment.centerLeft,
+                  splashColor: generator.resultPosition() == 0
+                      ? kBackgroundColour
+                      : kTextColour,
                   icon: Icon(
                     Icons.arrow_back,
-                    color: kTextColour,
+                    color: generator.resultPosition() == 0
+                        ? kBackgroundColour
+                        : kTextColour,
                   ),
                   tooltip: 'Predchádzajúca otázka',
-                  onPressed: () {
-                    setState(() {
-                      generator.previousQuestion();
-                    });
-                  },
+                  onPressed: generator.resultPosition() == 0
+                      ? () {}
+                      : () {
+                          setState(
+                            () {
+                              generator.previousQuestion();
+                            },
+                          );
+                        },
                 ),
               ),
               generator.getAttempt() == generator.getCorrectAnswer()
@@ -160,21 +159,32 @@ class _ResultPageState extends State<ResultPage> {
                 margin: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: kDefaultColorButton,
+                  color: generator.resultPosition() == 1
+                      ? kBackgroundColour
+                      : kDefaultColorButton,
                 ),
                 child: IconButton(
                   padding: EdgeInsets.all(20.0),
                   alignment: Alignment.centerRight,
+                  splashColor: generator.resultPosition() == 1
+                      ? kBackgroundColour
+                      : kTextColour,
                   icon: Icon(
                     Icons.arrow_forward,
-                    color: kTextColour,
+                    color: generator.resultPosition() == 1
+                        ? kBackgroundColour
+                        : kTextColour,
                   ),
                   tooltip: 'Následujúca otázka',
-                  onPressed: () {
-                    setState(() {
-                      generator.nextQuestion();
-                    });
-                  },
+                  onPressed: generator.resultPosition() == 1
+                      ? () {}
+                      : () {
+                          setState(
+                            () {
+                              generator.nextQuestion();
+                            },
+                          );
+                        },
                 ),
               ),
             ],
