@@ -1,18 +1,20 @@
 import 'dart:ui';
 
-import 'package:auto_size_text/auto_size_text.dart';
+import 'package:Lodicak/components/autosized_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
-import 'package:vmp/components/buttons.dart';
-import 'package:vmp/constants.dart';
-import 'package:vmp/questions/generator.dart';
-import 'package:vmp/questions/questions.dart';
-import 'package:vmp/screens/results_page.dart';
+import 'package:Lodicak/components/buttons.dart';
+import 'package:Lodicak/components/constants.dart';
+import 'package:Lodicak/questions/generator.dart';
+import 'package:Lodicak/questions/questions.dart';
+import 'package:Lodicak/screens/results_page.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 import 'home_page.dart';
 
 class QuizPage extends StatefulWidget {
   QuizPage({@required this.generator});
+
   final Generator generator;
 
   @override
@@ -40,30 +42,26 @@ class _QuizPageState extends State<QuizPage> {
               : 'TEST CEZ PALUBU!\nĽutujem',
           content: Column(
             children: [
-              Icon(
-                generator.getVerdict() ? Icons.check : Icons.close,
-                color: kTextColour,
-                size: 50.0,
+              Image(
+                image: AssetImage('images/app/appstore.png'),
+                width: 100.0,
               ),
               Text(
-                'Počet správne zodpovedaných otázok: ' +
-                    generator.getResult().toString() +
-                    '\nMinimálny počet: ' +
-                    generator.getMinimum(),
-                style: kAlertTextButton,
-                textAlign: TextAlign.center,
-              ),
+                  'Správne zodpovedané otázky: ' +
+                      generator.getResult().toString() +
+                      '\nMinimálny počet: ' +
+                      generator.getMinimum(),
+                  style: kAlertTextButton,
+                  textAlign: TextAlign.center,
+                  key: Key('alert_content')),
             ],
           ),
-          // desc: 'Počet správne zodpovedaných otázok: ' +
-          //     generator.getResult().toString() +
-          //     '\nMinimálny počet: ' +
-          //     generator.getMinimum(),
           buttons: [
             DialogButton(
               child: Text(
                 'VÝSLEDKY',
                 style: kAlertTextButton,
+                key: Key('alert_btn1'),
               ),
               onPressed: () {
                 Navigator.push(
@@ -81,6 +79,7 @@ class _QuizPageState extends State<QuizPage> {
               child: Text(
                 'MENU',
                 style: kAlertTextButton,
+                key: Key('alert_btn2'),
               ),
               onPressed: () {
                 Navigator.push(
@@ -90,7 +89,7 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                 );
               },
-              color: Color(0xFF303F9F),
+              color: kMenuDarkBlueColor,
             ),
           ],
         ).show();
@@ -104,10 +103,10 @@ class _QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: AutoSizeText(
-          'Vodca malého plavidla',
+        title: AutoSizeWidget(
+          text: 'Vodca malého plavidla',
           style: kOptionTextButton,
-          maxLines: 1,
+          key: Key('title'),
         ),
         leading: Center(
           child: Text(
@@ -122,17 +121,24 @@ class _QuizPageState extends State<QuizPage> {
               padding: const EdgeInsets.only(right: 8.0),
               child: Text(
                 'MENU',
-                style: kOptionTextButton,
+                style: kAlertTextButton,
                 textAlign: TextAlign.right,
               ),
             ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ),
-              );
+            onPressed: () async {
+              try {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
+              } catch (exception, stackTrace) {
+                await Sentry.captureException(
+                  exception,
+                  stackTrace: stackTrace,
+                );
+              }
             },
           ),
         ],
@@ -146,11 +152,10 @@ class _QuizPageState extends State<QuizPage> {
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: Text(
-                  generator.getQuestionText(),
-                  textAlign: TextAlign.center,
-                  style: kQuestionTextButton,
-                ),
+                child: AutoSizeWidget(
+                    text: generator.getQuestionText(),
+                    style: kQuestionTextButton,
+                    key: Key('text_question')),
               ),
             ),
           ),
@@ -173,24 +178,45 @@ class _QuizPageState extends State<QuizPage> {
           Expanded(
             child: OptionButton(
               questionOptionText: generator.getQuestionOptions(0),
-              onPressed: () {
-                checkAnswer(0);
+              onPressed: () async {
+                try {
+                  checkAnswer(0);
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
               },
             ),
           ),
           Expanded(
             child: OptionButton(
               questionOptionText: generator.getQuestionOptions(1),
-              onPressed: () {
-                checkAnswer(1);
+              onPressed: () async {
+                try {
+                  checkAnswer(1);
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
               },
             ),
           ),
           Expanded(
             child: OptionButton(
               questionOptionText: generator.getQuestionOptions(2),
-              onPressed: () {
-                checkAnswer(2);
+              onPressed: () async {
+                try {
+                  checkAnswer(2);
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
               },
             ),
           ),

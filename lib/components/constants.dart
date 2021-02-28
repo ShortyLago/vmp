@@ -9,6 +9,10 @@ const kDefaultColorButton = Color(0xFF1976D2);
 const kCorrectColorButton = Color(0xFF4CAF50);
 const kWrongColorButton = Color(0xFFD32F2F);
 const kBackgroundColour = Color(0xFF2196F3);
+const kMenuDarkBlueColor = Color(0xFF303F9F);
+const kMenuDarkBlueColor2 = Color(0xFF3F51B5);
+const kMenuLightBlueColor = Color(0xFF448AFF);
+const kMenuLightBlueColor2 = Color(0xFF03A9F4);
 
 // const kTitleTextButton = TextStyle(
 //   fontSize: 20.0,
@@ -17,7 +21,7 @@ const kBackgroundColour = Color(0xFF2196F3);
 
 const kAlertTextButton = TextStyle(
   color: kTextColour,
-  fontSize: 20.0,
+  fontSize: 18.0,
   height: 1,
 );
 
@@ -38,7 +42,7 @@ var alertStyle = AlertStyle(
   animationType: AnimationType.fromTop,
   isCloseButton: false,
   isOverlayTapDismiss: false,
-  descStyle: TextStyle(fontWeight: FontWeight.bold),
+  // descStyle: TextStyle(fontWeight: FontWeight.bold),
   descTextAlign: TextAlign.center,
   animationDuration: Duration(milliseconds: 400),
   alertBorder: RoundedRectangleBorder(

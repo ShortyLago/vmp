@@ -1,11 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:vmp/questions/questions_cevni.dart';
-import 'package:vmp/questions/questions_elektro.dart';
-import 'package:vmp/questions/questions_plachty.dart';
-import 'package:vmp/questions/questions_zakon.dart';
-import 'package:vmp/questions/questions_zemepis.dart';
+import 'package:Lodicak/questions/questions_cevni.dart';
+import 'package:Lodicak/questions/questions_elektro.dart';
+import 'package:Lodicak/questions/questions_plachty.dart';
+import 'package:Lodicak/questions/questions_zakon.dart';
+import 'package:Lodicak/questions/questions_zemepis.dart';
 
 import 'questions.dart';
 
@@ -19,11 +19,11 @@ class Generator {
 
   List<Question> _questionBank = [];
   List<int> _answers = [];
-  List<int> randomCevni = [];
-  List<int> randomZakon = [];
-  List<int> randomZemepis = [];
-  List<int> randomElektro = [];
-  List<int> randomPlachty = [];
+  List<int> _randomCevni = [];
+  List<int> _randomZakon = [];
+  List<int> _randomZemepis = [];
+  List<int> _randomElektro = [];
+  List<int> _randomPlachty = [];
 
   // CONSTRUCTOR
   Generator({@required this.quizType}) {
@@ -32,35 +32,35 @@ class Generator {
       // CEVNI
       for (var i = 0; i < 20; i++) {
         int randomNum = rng.nextInt(questionsCevni.length);
-        while (randomCevni.contains(randomNum)) {
+        while (_randomCevni.contains(randomNum)) {
           randomNum = rng.nextInt(questionsCevni.length);
         }
-        randomCevni.add(randomNum);
+        _randomCevni.add(randomNum);
       }
-      for (var i = 0; i < randomCevni.length; i++) {
-        _questionBank.add(questionsCevni[randomCevni[i]]);
+      for (var i = 0; i < _randomCevni.length; i++) {
+        _questionBank.add(questionsCevni[_randomCevni[i]]);
       }
       // ZAKON
       for (var i = 0; i < 4; i++) {
         int randomNum = rng.nextInt(questionsZakon.length);
-        while (randomZakon.contains(randomNum)) {
+        while (_randomZakon.contains(randomNum)) {
           randomNum = rng.nextInt(questionsZakon.length);
         }
-        randomZakon.add(randomNum);
+        _randomZakon.add(randomNum);
       }
-      for (var i = 0; i < randomZakon.length; i++) {
-        _questionBank.add(questionsZakon[randomZakon[i]]);
+      for (var i = 0; i < _randomZakon.length; i++) {
+        _questionBank.add(questionsZakon[_randomZakon[i]]);
       }
       // ZEMEPIS
       for (var i = 0; i < 4; i++) {
         int randomNum = rng.nextInt(questionsZemepis.length);
-        while (randomZemepis.contains(randomNum)) {
+        while (_randomZemepis.contains(randomNum)) {
           randomNum = rng.nextInt(questionsZemepis.length);
         }
-        randomZemepis.add(randomNum);
+        _randomZemepis.add(randomNum);
       }
-      for (var i = 0; i < randomZemepis.length; i++) {
-        _questionBank.add(questionsZemepis[randomZemepis[i]]);
+      for (var i = 0; i < _randomZemepis.length; i++) {
+        _questionBank.add(questionsZemepis[_randomZemepis[i]]);
       }
     }
     // B
@@ -68,13 +68,13 @@ class Generator {
       // ELEKTRO
       for (var i = 0; i < 7; i++) {
         int randomNum = rng.nextInt(questionsElektro.length);
-        while (randomElektro.contains(randomNum)) {
+        while (_randomElektro.contains(randomNum)) {
           randomNum = rng.nextInt(questionsElektro.length);
         }
-        randomElektro.add(randomNum);
+        _randomElektro.add(randomNum);
       }
-      for (var i = 0; i < randomElektro.length; i++) {
-        _questionBank.add(questionsElektro[randomElektro[i]]);
+      for (var i = 0; i < _randomElektro.length; i++) {
+        _questionBank.add(questionsElektro[_randomElektro[i]]);
       }
     }
     // C
@@ -82,13 +82,13 @@ class Generator {
       // PLACHTY
       for (var i = 0; i < 7; i++) {
         int randomNum = rng.nextInt(questionsPlachty.length);
-        while (randomPlachty.contains(randomNum)) {
+        while (_randomPlachty.contains(randomNum)) {
           randomNum = rng.nextInt(questionsPlachty.length);
         }
-        randomPlachty.add(randomNum);
+        _randomPlachty.add(randomNum);
       }
-      for (var i = 0; i < randomPlachty.length; i++) {
-        _questionBank.add(questionsPlachty[randomPlachty[i]]);
+      for (var i = 0; i < _randomPlachty.length; i++) {
+        _questionBank.add(questionsPlachty[_randomPlachty[i]]);
       }
     }
 

@@ -1220,7 +1220,7 @@ List<Question> questionsCevni = [
       '136. Ak plavidlá alebo zostavy stoja v noci pri brehu a sú dostatočne dobre osvetlené z brehu, musia:',
       '/',
       [
-        'A. niesť jedno obyčajné biele svetlo viditeľné zo všetkých strán, umiestnené zo strany plavebnej dráhy vo výške najmenej 4 m',
+        'A. niesť jedno obyčajné biele svetlo viditeľné zo všetkých strán, umiestnené zo strany plavebnej dráhy vo výške najmenej \n4 m',
         'B. niesť dve obyčajné biele svetlá viditeľné zo všetkých strán, umiestnené zo strany plavebnej dráhy vo výške najmenej 3 m',
         'C. nevyžaduje sa žiadna optická signalizácia',
       ],

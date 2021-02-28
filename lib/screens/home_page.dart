@@ -1,11 +1,12 @@
-import 'package:auto_size_text/auto_size_text.dart';
+import 'package:Lodicak/components/autosized_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:vmp/components/buttons.dart';
-import 'package:vmp/constants.dart';
-import 'package:vmp/questions/generator.dart';
-import 'package:vmp/screens/quiz_page.dart';
+import 'package:Lodicak/components/buttons.dart';
+import 'package:Lodicak/components/constants.dart';
+import 'package:Lodicak/questions/generator.dart';
+import 'package:Lodicak/screens/quiz_page.dart';
+import 'package:sentry/sentry.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -17,25 +18,29 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // automaticallyImplyLeading: false,
-        title: AutoSizeText(
-          'Vodca malého plavidla',
+        title: AutoSizeWidget(
+          text: 'Vodca malého plavidla',
           style: kOptionTextButton,
-          maxLines: 1,
+          key: Key('title'),
         ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
-            flex: 3,
-            // alignment: Alignment.center,
-            // height: 300.0,
+            flex: 2,
+            child: Image(
+              image: AssetImage('images/app/appstore.png'),
+              // fit: BoxFit.contain,
+            ),
+          ),
+          Expanded(
+            flex: 1,
             child: Center(
-              child: AutoSizeText(
-                'Vyberte kategóriu testu:',
+              child: AutoSizeWidget(
+                text: 'Vyberte kategóriu testu:',
                 style: kQuestionTextButton,
-                maxLines: 1,
+                key: Key('text_1'),
                 // textAlign: TextAlign.center,
               ),
             ),
@@ -43,66 +48,97 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: MainButton(
               buttonTitle: 'Vodca malého plavidla kategórie A',
-              onTap: () {
-                Generator generator = Generator(quizType: 0);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => QuizPage(generator: generator),
-                  ),
-                );
+              onTap: () async {
+                try {
+                  Generator generator = Generator(quizType: 0);
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuizPage(generator: generator),
+                    ),
+                  );
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
               },
-              buttonColour: Color(0xFF303F9F),
+              buttonColour: kMenuDarkBlueColor,
+              key: Key('text_2'),
             ),
           ),
           Expanded(
             child: MainButton(
               buttonTitle: 'Vodca malého plavidla kategórie B',
-              onTap: () {
-                Generator generator = Generator(quizType: 1);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => QuizPage(generator: generator),
-                  ),
-                );
+              onTap: () async {
+                try {
+                  Generator generator = Generator(quizType: 1);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuizPage(generator: generator),
+                    ),
+                  );
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
               },
-              buttonColour: Color(0xFF3F51B5),
+              buttonColour: kMenuDarkBlueColor2,
+              key: Key('text_3'),
             ),
           ),
           Expanded(
             child: MainButton(
               buttonTitle: 'Vodca malého plavidla kategórie C',
-              onTap: () {
-                Generator generator = Generator(quizType: 2);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => QuizPage(generator: generator),
-                  ),
-                );
+              onTap: () async {
+                try {
+                  Generator generator = Generator(quizType: 2);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuizPage(generator: generator),
+                    ),
+                  );
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
               },
-              buttonColour: Color(0xFF448AFF),
+              buttonColour: kMenuLightBlueColor,
+              key: Key('text_4'),
             ),
           ),
           Expanded(
             child: MainButton(
               buttonTitle: 'Vodca malého plavidla kategórie D',
-              onTap: () {
-                Generator generator = Generator(quizType: 3);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => QuizPage(generator: generator),
-                  ),
-                );
+              onTap: () async {
+                try {
+                  Generator generator = Generator(quizType: 3);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuizPage(generator: generator),
+                    ),
+                  );
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
               },
-              buttonColour: Color(0xFF03A9F4),
+              buttonColour: kMenuLightBlueColor2,
+              key: Key('text_5'),
             ),
           ),
-          SizedBox(
-            height: 100.0,
-          ),
+          SizedBox(height: 100.0,)
         ],
       ),
     );
