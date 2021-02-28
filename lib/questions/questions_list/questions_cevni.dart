@@ -1,4 +1,4 @@
-import 'questions.dart';
+import '../questions.dart';
 
 List<Question> questionsCevni = [
   Question(

@@ -1,11 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:Lodicak/questions/questions_cevni.dart';
-import 'package:Lodicak/questions/questions_elektro.dart';
-import 'package:Lodicak/questions/questions_plachty.dart';
-import 'package:Lodicak/questions/questions_zakon.dart';
-import 'package:Lodicak/questions/questions_zemepis.dart';
+import 'package:Lodicak/questions/questions_list/questions_cevni.dart';
+import 'package:Lodicak/questions/questions_list/questions_elektro.dart';
+import 'package:Lodicak/questions/questions_list/questions_plachty.dart';
+import 'package:Lodicak/questions/questions_list/questions_zakon.dart';
+import 'package:Lodicak/questions/questions_list/questions_zemepis.dart';
 
 import 'questions.dart';
 

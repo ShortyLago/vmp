@@ -1,4 +1,4 @@
-import 'questions.dart';
+import 'package:Lodicak/questions/questions.dart';
 
 List<Question> questionsZakon = [
   Question(

@@ -21,3 +21,5 @@ doc/api/
 *.js.map
 vmp.iml
 /.idea/
+
+/lib/questions/questions_list/
