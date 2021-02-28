@@ -38,12 +38,14 @@ class _QuizPageState extends State<QuizPage> {
           style: alertStyle,
           // type: generator.getVerdict() ? AlertType.info : AlertType.info,
           title: generator.getVerdict()
-              ? 'AI AI Captain!\nGratulujem!'
-              : 'TEST CEZ PALUBU!\nĽutujem',
+              ? 'Ai Ai Captain!\nGratulujem!'
+              : 'TEST CEZ PALUBU!\nĽutujem.',
           content: Column(
             children: [
               Image(
-                image: AssetImage('images/app/appstore.png'),
+                image: AssetImage(generator.getVerdict()
+                    ? 'images/app/test_yes.png'
+                    : 'images/app/test_no.png'),
                 width: 100.0,
               ),
               Text(

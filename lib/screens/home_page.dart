@@ -30,12 +30,12 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             flex: 2,
             child: Image(
-              image: AssetImage('images/app/appstore.png'),
+              image: AssetImage('images/app/test_yes.png'),
               // fit: BoxFit.contain,
             ),
           ),
           Expanded(
-            flex: 1,
+            // flex: 2,
             child: Center(
               child: AutoSizeWidget(
                 text: 'Vyberte kategóriu testu:',
