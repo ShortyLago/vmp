@@ -339,8 +339,8 @@ List<Question> questionsCevni = [
       '/',
       [
         'A. sú povinní plniť všetky príkazy prevádzkovateľa plavidla, ktoré vyplývajú z jeho právomoci',
-        'B.sú povinní splniť príkazy vodcu plavidla, ktoré sú v súlade s ich pracovnou náplňou',
-        'C.sú povinní splniť všetky príkazy vodcu plavidla, ktoré vyplývajú z jeho právomocí. Sú povinní spolupracovať pri dodržiavaní ustanovení pravidiel CEVNI a iných súvisiacich predpisov',
+        'B. sú povinní splniť príkazy vodcu plavidla, ktoré sú v súlade s ich pracovnou náplňou',
+        'C. sú povinní splniť všetky príkazy vodcu plavidla, ktoré vyplývajú z jeho právomocí. Sú povinní spolupracovať pri dodržiavaní ustanovení pravidiel CEVNI a iných súvisiacich predpisov',
       ],
       2),
   Question(
@@ -429,8 +429,8 @@ List<Question> questionsCevni = [
       '/',
       [
         'A. pokiaľ nepodlieha registrácii podľa plavebných predpisov',
-        'B.ak výkon motora je vyšší ako 4 kW',
-        'C.ak výkon motora je menší ako 4 kW',
+        'B. ak výkon motora je vyšší ako 4 kW',
+        'C. ak výkon motora je menší ako 4 kW',
       ],
       1),
   Question(
@@ -560,12 +560,12 @@ List<Question> questionsCevni = [
       ],
       0),
   Question(
-      '63. Katamaran je plavidlo: ',
+      '63. Ak nasadnuté alebo potopené plavidlo, nasadnuté plávajúce teleso alebo predmet spadnutý z plavidla alebo plávajúceho telesa, úplne alebo čiastočne zatarasí plavebnú dráhu, alebo hrozí jej zatarasením, vodca plavidla alebo plávajúceho telesa je povinný:',
       '/',
       [
-        'a/ s jedným trupom',
-        'b/ s dvoma trupmi',
-        'c/ s troma trupmi',
+        'A. pri dodržaní predpisov o bezpečnosti a ochrane zdravia pri práci alebo iných činnostiach vo vnútrozemskej plavbe zaistiť včasné opustenie plavidla',
+        'B. vytvoriť kompetentným orgánom také podmienky, ktoré im umožnia presvedčiť sa či sú dodržané ustanovenia CEVNI',
+        'C. vykonať všetky opatrenia, aby plavebná dráha bola čo najskôr uvoľnená'
       ],
       2),
   Question(
@@ -2085,7 +2085,7 @@ List<Question> questionsCevni = [
       '/',
       [
         'A. treba zvýšiť rýchlosť, nakoľko je to signál ochrany pred vlnobitím',
-        ' B. v blízkosti plavebne dráhy stojí hydroplán',
+        'B. v blízkosti plavebne dráhy stojí hydroplán',
         'C. plavidlo v núdzi potrebuje pomoc',
       ],
       0),
@@ -2858,8 +2858,8 @@ List<Question> questionsCevni = [
       '322. Čo znamená signálny znak na obrázku?',
       'images/cevni/image--014.png',
       [
-        'A. zákaz vykonávania obratov v smere proti pohybu hodinových ručičiek'
-            'B. zákaz vykonávania obratov',
+        'A. zákaz vykonávania obratov v smere proti pohybu hodinových ručičiek',
+        'B. zákaz vykonávania obratov',
         'C. v priestore po značke je vhodné miesto na vykonávanie obratov',
       ],
       1),
@@ -2895,8 +2895,8 @@ List<Question> questionsCevni = [
       'images/cevni/image--018.png',
       [
         'A. zákaz plavby plavidiel s vlastným pohonom',
-        'zákaz prevádzať skúšobné plavby s plavidlami bez vlastného pohonu',
-        'zákaz preplávania plavidiel prepravujúcich rádioaktívne látky',
+        'B. zákaz prevádzať skúšobné plavby s plavidlami bez vlastného pohonu',
+        'C. zákaz preplávania plavidiel prepravujúcich rádioaktívne látky',
       ],
       0),
   Question(
@@ -3535,7 +3535,7 @@ List<Question> questionsCevni = [
       [
         'A. biele rytmické svetlo',
         'B. stále biele svetlo',
-        'zeleno-červené blikajúce svetlo',
+        'C. zeleno-červené blikajúce svetlo',
       ],
       0),
   Question(

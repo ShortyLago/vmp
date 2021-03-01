@@ -17,7 +17,6 @@ class AutoSizeWidget extends StatelessWidget {
       textAlign: TextAlign.center,
       minFontSize: 10.0,
       maxFontSize: style.fontSize,
-      // maxLines: style == kResultsWhite ? 2 : 1,
     );
   }
 }

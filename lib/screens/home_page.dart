@@ -6,7 +6,9 @@ import 'package:Lodicak/components/buttons.dart';
 import 'package:Lodicak/components/constants.dart';
 import 'package:Lodicak/questions/generator.dart';
 import 'package:Lodicak/screens/quiz_page.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:sentry/sentry.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,6 +16,48 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  void infoAlert () {
+    setState(() {
+      Alert(
+        context: context,
+        style: alertButton(isCloseButton: true, isOverlayTapDismiss: true),
+        title: 'Viac informácií:',
+        content: Image(
+          image: AssetImage('images/app/test_yes.png'),
+          alignment: Alignment.center,
+          width: 100.0,
+        ),
+        buttons: [
+          DialogButton(
+            child: Text(
+              'DOPRAVNÝ\nÚRAD',
+              style: kInfoTextButton,
+              textAlign: TextAlign.center,
+              key: Key('alert_btn1'),
+            ),
+            onPressed: () async {
+               await launch('http://plavba.nsat.sk/odborne-sposobilosti/vodca-maleho-plavidla/');
+            },
+            color: kDefaultColorButton,
+          ),
+          DialogButton(
+            child: Text(
+              'KAPITÁNSKE\nKURZY',
+              style: kInfoTextButton,
+              textAlign: TextAlign.center,
+              key: Key('alert_btn2'),
+            ),
+            onPressed: () async {
+              await launch('http://kapitanskykurz.sk/');
+            },
+            color: kMenuDarkBlueColor,
+          ),
+        ],
+      ).show();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,7 +182,13 @@ class _HomePageState extends State<HomePage> {
               key: Key('text_5'),
             ),
           ),
-          SizedBox(height: 100.0,)
+          Expanded(
+            child: Container(
+              height: 100.0,
+              alignment: Alignment.topRight,
+              child: IconButton(icon: Icon(Icons.info, color: kTextColour,), onPressed: infoAlert),
+            ),
+          )
         ],
       ),
     );
