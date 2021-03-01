@@ -1,14 +1,20 @@
+import 'dart:ui';
+
+import 'package:Lodicak/components/autosized_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
-import 'package:vmp/constants.dart';
-import 'package:vmp/questions/generator.dart';
-import 'package:vmp/questions/questions.dart';
-import 'package:vmp/screens/results_page.dart';
+import 'package:Lodicak/components/buttons.dart';
+import 'package:Lodicak/components/constants.dart';
+import 'package:Lodicak/questions/generator.dart';
+import 'package:Lodicak/questions/questions.dart';
+import 'package:Lodicak/screens/results_page.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 import 'home_page.dart';
 
 class QuizPage extends StatefulWidget {
   QuizPage({@required this.generator});
+
   final Generator generator;
 
   @override
@@ -17,12 +23,9 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   Generator generator;
-  // Generator generator;
   List<Question> questions;
 
   _QuizPageState({@required this.generator}) {
-    // generator = Generator(quizType: quizType);
-    // questions = generator.questionBank;
     generator = this.generator;
   }
 
@@ -32,14 +35,35 @@ class _QuizPageState extends State<QuizPage> {
       if (generator.isFinished() == true) {
         Alert(
           context: context,
-          type: generator.getVerdict() ? AlertType.success : AlertType.error,
-          title: 'Hotovo!',
-          desc: 'Zodpovedali ste na všetky otázky.',
+          style: alertStyle,
+          // type: generator.getVerdict() ? AlertType.info : AlertType.info,
+          title: generator.getVerdict()
+              ? 'Ai Ai Captain!\nGratulujem!'
+              : 'TEST CEZ PALUBU!\nĽutujem.',
+          content: Column(
+            children: [
+              Image(
+                image: AssetImage(generator.getVerdict()
+                    ? 'images/app/test_yes.png'
+                    : 'images/app/test_no.png'),
+                width: 100.0,
+              ),
+              Text(
+                  'Správne zodpovedané otázky: ' +
+                      generator.getResult().toString() +
+                      '\nMinimálny počet: ' +
+                      generator.getMinimum(),
+                  style: kAlertTextButton,
+                  textAlign: TextAlign.center,
+                  key: Key('alert_content')),
+            ],
+          ),
           buttons: [
             DialogButton(
               child: Text(
                 'VÝSLEDKY',
                 style: kAlertTextButton,
+                key: Key('alert_btn1'),
               ),
               onPressed: () {
                 Navigator.push(
@@ -51,12 +75,13 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                 );
               },
-              color: Color.fromRGBO(0, 179, 134, 1.0),
+              color: kDefaultColorButton,
             ),
             DialogButton(
               child: Text(
                 'MENU',
                 style: kAlertTextButton,
+                key: Key('alert_btn2'),
               ),
               onPressed: () {
                 Navigator.push(
@@ -66,7 +91,7 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                 );
               },
-              color: Colors.red,
+              color: kMenuDarkBlueColor,
             ),
           ],
         ).show();
@@ -80,93 +105,125 @@ class _QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Vodca Malého Plavidla',
+        title: AutoSizeWidget(
+          text: 'Vodca malého plavidla',
+          style: kOptionTextButton,
+          key: Key('title'),
         ),
+        leading: Center(
+          child: Text(
+            generator.questionPossition(),
+            style: kOptionTextButton,
+          ),
+        ),
+        automaticallyImplyLeading: false,
+        actions: [
+          TextButton(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(
+                'MENU',
+                style: kAlertTextButton,
+                textAlign: TextAlign.right,
+              ),
+            ),
+            onPressed: () async {
+              try {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
+              } catch (exception, stackTrace) {
+                await Sentry.captureException(
+                  exception,
+                  stackTrace: stackTrace,
+                );
+              }
+            },
+          ),
+        ],
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
-            flex: 2,
+            flex: generator.getQuestionImage() == '/' ? 2 : 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: Text(
-                  generator.getQuestionText(),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 25.0,
-                    color: Colors.black,
-                  ),
-                ),
+                child: AutoSizeWidget(
+                    text: generator.getQuestionText(),
+                    style: kQuestionTextButton,
+                    key: Key('text_question')),
               ),
             ),
           ),
           Expanded(
-            flex: 1,
-            child: Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Center(
-                child: Image(
-                  image: AssetImage(
-                    generator.getQuestionImage(),
-                  ),
-                ),
-              ),
+            flex: generator.getQuestionImage() == '/' ? 0 : 2,
+            child: Center(
+              child: generator.getQuestionImage() == '/'
+                  ? Text('')
+                  : Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Image(
+                        image: AssetImage(
+                          generator.getQuestionImage(),
+                        ),
+                        fit: BoxFit.contain,
+                      ),
+                    ),
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(5.0),
-              child: FlatButton(
-                // textColor: Colors.black,
-                color: Color(0xFF0288D1),
-                child: Text(
-                  generator.getQuestionOptions(0),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {
+            child: OptionButton(
+              questionOptionText: generator.getQuestionOptions(0),
+              onPressed: () async {
+                try {
                   checkAnswer(0);
-                },
-              ),
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
+              },
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(5.0),
-              child: FlatButton(
-                // textColor: Colors.white,
-                color: Color(0xFF0288D1),
-                child: Text(
-                  generator.getQuestionOptions(1),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {
+            child: OptionButton(
+              questionOptionText: generator.getQuestionOptions(1),
+              onPressed: () async {
+                try {
                   checkAnswer(1);
-                },
-              ),
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
+              },
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(5.0),
-              child: FlatButton(
-                // textColor: Colors.white,
-                color: Color(0xFF0288D1),
-                child: Text(
-                  generator.getQuestionOptions(2),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {
+            child: OptionButton(
+              questionOptionText: generator.getQuestionOptions(2),
+              onPressed: () async {
+                try {
                   checkAnswer(2);
-                },
-              ),
+                } catch (exception, stackTrace) {
+                  await Sentry.captureException(
+                    exception,
+                    stackTrace: stackTrace,
+                  );
+                }
+              },
             ),
+          ),
+          SizedBox(
+            height: 20.0,
           ),
         ],
       ),

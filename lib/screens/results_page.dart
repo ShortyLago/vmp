@@ -1,11 +1,17 @@
+import 'package:Lodicak/components/autosized_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:vmp/constants.dart';
-import 'package:vmp/questions/generator.dart';
-import 'package:vmp/questions/questions.dart';
+import 'package:Lodicak/components/buttons.dart';
+import 'package:Lodicak/components/constants.dart';
+import 'package:Lodicak/questions/generator.dart';
+import 'package:Lodicak/questions/questions.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
+
+import 'home_page.dart';
 
 class ResultPage extends StatefulWidget {
   ResultPage({@required this.generator});
+
   final Generator generator;
 
   @override
@@ -14,6 +20,7 @@ class ResultPage extends StatefulWidget {
 
 class _ResultPageState extends State<ResultPage> {
   Generator generator;
+
   // Generator generator;
   List<Question> questions;
 
@@ -39,61 +46,76 @@ class _ResultPageState extends State<ResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Vodca Malého Plavidla',
+        title: AutoSizeWidget(
+          text: 'Vodca malého plavidla',
+          style: kOptionTextButton,
+          key: Key('title'),
         ),
+        leading: Center(
+          child: AutoSizeWidget(
+            text: generator.questionPossition(),
+            style: kOptionTextButton,
+            key: Key('text_possition'),
+          ),
+        ),
+        automaticallyImplyLeading: false,
+        actions: [
+          TextButton(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(
+                'MENU',
+                style: kAlertTextButton,
+                textAlign: TextAlign.right,
+              ),
+            ),
+            onPressed: () async {
+              try {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                );
+              } catch (exception, stackTrace) {
+                await Sentry.captureException(
+                  exception,
+                  stackTrace: stackTrace,
+                );
+              }
+            },
+          ),
+        ],
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(20.0),
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              color: Colors.redAccent,
-              border: Border.all(
-                color: Colors.black,
-                width: 2,
-              ),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: FlatButton(
-              child: Text(
-                'HLAVNÉ MENU',
-                style: kOptionsTextButton,
-              ),
-              onPressed: () {
-                setState(() {});
-              },
-            ),
-          ),
           Expanded(
-            // flex: 2,
+            flex: generator.getQuestionImage() == '/' ? 2 : 1,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: Text(
-                  generator.getQuestionText(),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 25.0,
-                    color: Colors.black,
-                  ),
-                ),
+                child: AutoSizeWidget(
+                    text: generator.getQuestionText(),
+                    style: kQuestionTextButton,
+                    key: Key('text_question')),
               ),
             ),
           ),
           Expanded(
-            flex: generator.getQuestionImage() == '' ? 0 : 1,
+            flex: generator.getQuestionImage() == '/' ? 0 : 2,
             child: Padding(
               padding: EdgeInsets.all(10.0),
               child: Center(
-                child: Image(
-                  image: AssetImage(
-                    generator.getQuestionImage(),
-                  ),
-                ),
+                child: generator.getQuestionImage() == '/'
+                    ? Text('')
+                    : Image(
+                        image: AssetImage(
+                          generator.getQuestionImage(),
+                        ),
+                        fit: BoxFit.contain,
+                      ),
               ),
             ),
           ),
@@ -101,167 +123,122 @@ class _ResultPageState extends State<ResultPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blueAccent,
+                  color: generator.resultPosition() == 0
+                      ? kBackgroundColour
+                      : kDefaultColorButton,
                 ),
                 child: IconButton(
                   padding: EdgeInsets.all(20.0),
                   alignment: Alignment.centerLeft,
+                  splashColor: generator.resultPosition() == 0
+                      ? kBackgroundColour
+                      : kTextColour,
                   icon: Icon(
                     Icons.arrow_back,
-                    color: Colors.white,
+                    color: generator.resultPosition() == 0
+                        ? kBackgroundColour
+                        : kTextColour,
                   ),
                   tooltip: 'Predchádzajúca otázka',
-                  onPressed: () {
-                    setState(() {
-                      generator.previousQuestion();
-                    });
-                  },
+                  onPressed: generator.resultPosition() == 0
+                      ? () {}
+                      : () async {
+                          try {
+                            setState(
+                              () {
+                                generator.previousQuestion();
+                              },
+                            );
+                          } catch (exception, stackTrace) {
+                            await Sentry.captureException(
+                              exception,
+                              stackTrace: stackTrace,
+                            );
+                          }
+                        },
                 ),
               ),
-              IconButton(
-                alignment: Alignment.center,
-                onPressed: () {},
-                icon: generator.getAttempt() == generator.getCorrectAnswer()
-                    ? Icon(
-                        Icons.check,
-                        color: Colors.green,
-                      )
-                    : Icon(
-                        Icons.close,
-                        color: Colors.red,
-                      ),
-              ),
+              generator.getAttempt() == generator.getCorrectAnswer()
+                  ? Icon(
+                      Icons.check,
+                      color: kTextColour,
+                      size: 50.0,
+                    )
+                  : Icon(
+                      Icons.close,
+                      color: kTextColour,
+                      size: 50.0,
+                    ),
               Container(
-                margin: EdgeInsets.all(20.0),
+                margin: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blueAccent,
+                  color: generator.resultPosition() == 1
+                      ? kBackgroundColour
+                      : kDefaultColorButton,
                 ),
                 child: IconButton(
                   padding: EdgeInsets.all(20.0),
                   alignment: Alignment.centerRight,
+                  splashColor: generator.resultPosition() == 1
+                      ? kBackgroundColour
+                      : kTextColour,
                   icon: Icon(
                     Icons.arrow_forward,
-                    color: Colors.white,
+                    color: generator.resultPosition() == 1
+                        ? kBackgroundColour
+                        : kTextColour,
                   ),
                   tooltip: 'Následujúca otázka',
-                  onPressed: () {
-                    setState(() {
-                      generator.nextQuestion();
-                    });
-                  },
+                  onPressed: generator.resultPosition() == 1
+                      ? () {}
+                      : () async {
+                          try {
+                            setState(
+                              () {
+                                generator.nextQuestion();
+                              },
+                            );
+                          } catch (exception, stackTrace) {
+                            await Sentry.captureException(
+                              exception,
+                              stackTrace: stackTrace,
+                            );
+                          }
+                        },
                 ),
               ),
             ],
           ),
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.only(
-                  left: 15.0, top: 10.0, right: 15.0, bottom: 10.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: checkAnswer(0),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: FlatButton(
-                // textColor: Colors.black,
-                child: Text(
-                  generator.getQuestionOptions(0),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {},
-              ),
+            child: OptionButton(
+              colour: checkAnswer(0),
+              questionOptionText: generator.getQuestionOptions(0),
+              onPressed: () {},
             ),
           ),
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.only(
-                  left: 15.0, top: 10.0, right: 15.0, bottom: 10.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: checkAnswer(1),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: FlatButton(
-                // textColor: Colors.white,
-                child: Text(
-                  generator.getQuestionOptions(1),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {},
-              ),
+            child: OptionButton(
+              colour: checkAnswer(1),
+              questionOptionText: generator.getQuestionOptions(1),
+              onPressed: () {},
             ),
           ),
           Expanded(
-            child: Container(
-              padding: EdgeInsets.all(5.0),
-              margin: EdgeInsets.only(
-                  left: 15.0, top: 10.0, right: 15.0, bottom: 10.0),
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: checkAnswer(2),
-                border: Border.all(
-                  color: Colors.black,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: FlatButton(
-                // textColor: Colors.white,
-                child: Text(
-                  generator.getQuestionOptions(2),
-                  textAlign: TextAlign.center,
-                  style: kOptionsTextButton,
-                ),
-                onPressed: () {
-                  // checkAnswer(2);
-                },
-              ),
+            child: OptionButton(
+              colour: checkAnswer(2),
+              questionOptionText: generator.getQuestionOptions(2),
+              onPressed: () {},
             ),
+          ),
+          SizedBox(
+            height: 20.0,
           ),
         ],
       ),
-      // floatingActionButton: Row(
-      //   mainAxisAlignment: MainAxisAlignment.end,
-      //   children: [
-      //     FloatingActionButton(
-      //       child: Icon(Icons.arrow_back),
-      //       onPressed: () {
-      //         setState(() {
-      //           generator.previousQuestion();
-      //         });
-      //       },
-      //       heroTag: null,
-      //     ),
-      //     SizedBox(
-      //       width: 300.0,
-      //     ),
-      //     FloatingActionButton(
-      //       child: Icon(Icons.arrow_forward),
-      //       onPressed: () {
-      //         setState(() {
-      //           generator.nextQuestion();
-      //         });
-      //       },
-      //       heroTag: null,
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
