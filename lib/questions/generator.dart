@@ -109,9 +109,7 @@ class Generator {
   }
 
   String questionPossition() {
-    return (_questionNumber + 1).toString() +
-        '/' +
-        (_questionBank.length).toString();
+    return (_questionNumber + 1).toString() + '/' + (_questionBank.length).toString();
   }
 
   int resultPosition() {

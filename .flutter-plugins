@@ -2,3 +2,8 @@
 integration_test=/Users/shorty/Projects/Flutter/flutter/packages/integration_test/
 package_info=/Users/shorty/Projects/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/package_info-0.4.3+4/
 sentry_flutter=/Users/shorty/Projects/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/sentry_flutter-4.0.5/
+url_launcher=/Users/shorty/Projects/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.7.10/
+url_launcher_linux=/Users/shorty/Projects/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_linux-0.0.1+4/
+url_launcher_macos=/Users/shorty/Projects/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-0.0.1+9/
+url_launcher_web=/Users/shorty/Projects/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.5+3/
+url_launcher_windows=/Users/shorty/Projects/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_windows-0.0.1+3/

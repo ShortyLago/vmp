@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:Lodicak/components/autosized_widget.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:Lodicak/components/buttons.dart';
@@ -36,10 +37,9 @@ class _QuizPageState extends State<QuizPage> {
         Alert(
           context: context,
           style: alertStyle,
-          // type: generator.getVerdict() ? AlertType.info : AlertType.info,
           title: generator.getVerdict()
-              ? 'Ai Ai Captain!\nGratulujem!'
-              : 'TEST CEZ PALUBU!\nĽutujem.',
+              ? 'Ai Ai Captain :)\nGratulujem!'
+              : 'TEST CEZ PALUBU :(\nĽutujem',
           content: Column(
             children: [
               Image(
@@ -111,9 +111,10 @@ class _QuizPageState extends State<QuizPage> {
           key: Key('title'),
         ),
         leading: Center(
-          child: Text(
+          child: AutoSizeText(
             generator.questionPossition(),
             style: kOptionTextButton,
+            maxLines: 1,
           ),
         ),
         automaticallyImplyLeading: false,

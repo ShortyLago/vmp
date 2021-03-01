@@ -14,15 +14,15 @@ const kMenuDarkBlueColor2 = Color(0xFF3F51B5);
 const kMenuLightBlueColor = Color(0xFF448AFF);
 const kMenuLightBlueColor2 = Color(0xFF03A9F4);
 
-// const kTitleTextButton = TextStyle(
-//   fontSize: 20.0,
-//   fontWeight: FontWeight.bold,
-// );
-
 const kAlertTextButton = TextStyle(
   color: kTextColour,
   fontSize: 18.0,
   height: 1,
+);
+
+const kInfoTextButton = TextStyle(
+  color: kTextColour,
+  fontSize: 15.0,
 );
 
 const kOptionTextButton = TextStyle(
@@ -37,23 +37,23 @@ const kQuestionTextButton = TextStyle(
   fontWeight: FontWeight.w800,
 );
 
-var alertStyle = AlertStyle(
-  backgroundColor: kBackgroundColour,
-  animationType: AnimationType.fromTop,
-  isCloseButton: false,
-  isOverlayTapDismiss: false,
-  // descStyle: TextStyle(fontWeight: FontWeight.bold),
-  descTextAlign: TextAlign.center,
-  animationDuration: Duration(milliseconds: 400),
-  alertBorder: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(20.0),
-    // side: BorderSide(
-    //   color: Colors.grey,
-    // ),
-  ),
-  titleStyle: TextStyle(
-    height: 1,
-    color: kTextColour,
-  ),
-  alertAlignment: Alignment.center,
+var alertStyle = alertButton();
+
+AlertStyle alertButton({bool isCloseButton = false, bool isOverlayTapDismiss = false}) {
+  return AlertStyle(
+backgroundColor: kBackgroundColour,
+animationType: AnimationType.fromTop,
+isCloseButton: isCloseButton,
+isOverlayTapDismiss: isOverlayTapDismiss,
+descTextAlign: TextAlign.center,
+animationDuration: Duration(milliseconds: 400),
+alertBorder: RoundedRectangleBorder(
+  borderRadius: BorderRadius.circular(20.0),
+),
+titleStyle: TextStyle(
+  height: 1,
+  color: kTextColour,
+),
+alertAlignment: Alignment.center,
 );
+}
